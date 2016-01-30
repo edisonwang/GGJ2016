@@ -78,8 +78,12 @@ public class PlayerDigController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1.1f);
         if (hit.collider == null)
             return true;
-        if (hit.collider.tag.StartsWith("Building"))
+        if (hit.collider.tag.StartsWith("Building")){
+            if(hit.collider.name.StartsWith("dig")){
+                hit.collider.gameObject.GetComponent<DigBlockController>().Dig();
+            }
             return false;
+        }
         return true;
     }
 
