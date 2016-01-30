@@ -75,7 +75,7 @@ public class PlayerDigController : MonoBehaviour
     }
     bool isClear(Vector2 direction)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1.1f);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(direction.x,direction.y,0), direction, 0.1f);
         if (hit.collider == null)
             return true;
         if (hit.collider.tag.StartsWith("Building")){
@@ -92,7 +92,7 @@ public class PlayerDigController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, 0.1f);
         if (hit.collider == null)
             return false;
-        if (hit.collider.transform.name.StartsWith("Back"))
+        if (hit.collider.transform.tag.StartsWith("Scene"))
             return true;
         return false;
     }

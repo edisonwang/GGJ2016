@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Building
+  - SceneTrigger
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ScreenMask
+    uniqueID: 2985841153
     locked: 0

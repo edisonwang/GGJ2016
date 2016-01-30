@@ -3,7 +3,8 @@ using System.Collections;
 
 public class DigBlockController : MonoBehaviour
 {
-    public float health = 5.0f;
+    public Sprite[] sprites;
+    public float health = 4.0f;
     float initHealth;
     Color color;
     // Use this for initialization
@@ -24,9 +25,10 @@ public class DigBlockController : MonoBehaviour
 
     public void Dig()
     {
-        
+
         health--;
-        Debug.Log(transform.name+ " Health: "+health);
-        transform.GetComponent<SpriteRenderer>().color = new Color(color.r,color.g, color.b, health/initHealth);
+        Debug.Log(transform.name + " Health: " + health);
+        if (health > 0)
+            transform.GetComponent<SpriteRenderer>().sprite = sprites[(int)health - 1];
     }
 }
