@@ -10,12 +10,14 @@ public class TileMotor : BasicMotor
 
     private Vector3 tileTarget;
     private MoveLookTarget prevMoveTarget;
+    private bool moving;
 
     public override bool Move()
     {
         //bool result = false;
-        Debug.Log("Motor Move");
+        //Debug.Log("Motor Move");
         MoveTarget.CloseEnoughDistance = 0;
+        moving = true;
         /*
         if (prevMoveTarget == null)
         {
@@ -35,21 +37,26 @@ public class TileMotor : BasicMotor
 
     public override bool IsAt(MoveLookTarget aTarget)
     {
-        Debug.Log("Motor IsAt");
+        //Debug.Log("Motor IsAt");
         return base.IsAt(aTarget);
     }
 
     public override void ApplyMotionTransforms()
     {
-        Debug.Log("ApplyMotionTransforms");
-        if (AI.Navigator.CurrentPath == null)
+        /*Debug.Log("ApplyMotionTransforms");
+        if (moving)
         {
-            return;
+            if (AI.Navigator.CurrentPath == null)
+            {
+                return;
+            }
+            var target = AI.Navigator.CurrentPath.PathPoints[AI.Navigator.NextWaypoint - 1];
+            var targetDisplacement = target - AI.Body.transform.position;
+            AI.Body.transform.position = AI.Body.transform.position + (targetDisplacement.normalized * Speed * AI.DeltaTime);
+            AI.Body.transform.rotation.SetLookRotation(targetDisplacement, Vector3.up);
         }
-        var target = AI.Navigator.CurrentPath.PathPoints[AI.Navigator.NextWaypoint];
-        var targetDisplacement = target - AI.Body.transform.position;
-        AI.Body.transform.position = AI.Body.transform.position + (targetDisplacement.normalized * Speed * AI.DeltaTime);
-        AI.Body.transform.rotation.SetLookRotation(targetDisplacement, Vector3.up);
+        moving = false;*/
+
         //base.ApplyMotionTransforms();
         /*AI.Body.transform.rotation.SetLookRotation(tileTarget - AI.Body.transform.position, Vector3.up);
 

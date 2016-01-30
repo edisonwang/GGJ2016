@@ -4,11 +4,12 @@ using RAIN.Action;
 using RAIN.Core;
 using RAIN.Representation;
 using RAIN.Motion;
+using RAIN.Navigation.Targets;
 
 [RAINAction]
 public class TileMove : RAINAction
 {
-    public Expression target;
+    //public Expression target;
 
     private Vector3 targetTile;
     private Vector3 moveDirection;
@@ -18,9 +19,15 @@ public class TileMove : RAINAction
     {
         movingToTarget = false;
         //targetTile = target.Evaluate<Vector3>(ai.DeltaTime, ai.WorkingMemory);
-        ai.Motor.MoveTarget = target.Evaluate<MoveLookTarget>(ai.DeltaTime, ai.WorkingMemory);
+        //ai.Motor.MoveTarget = new MoveLookTarget();
+        //ai.Motor.MoveTarget.NavigationTarget = target.Evaluate<RAIN.Navigation.Targets.NavigationTarget>(ai.DeltaTime, ai.WorkingMemory);
         //targetTile = ai.Motor.MoveTarget.Position;
         //base.Start(ai);
+        var nt = ai.WorkingMemory.GetItem<NavigationTarget>("moveTarget");
+        if (nt != null)
+        {
+            ai.Motor.MoveTarget.NavigationTarget = nt;
+        }
         ai.Motor.Move();
     }
 
@@ -33,15 +40,15 @@ public class TileMove : RAINAction
             {
                 var nextWaypointPos = ai.Navigator.CurrentPath.PathPoints[ai.Navigator.NextWaypoint];
                 var nextWaypointDir = (nextWaypointPos - ai.Body.transform.position).normalized;
-                if (Mathf.Approximately(nextWaypointDir.x, 0) && Mathf.Approximately(nextWaypointDir.z, 0))
-                {
-                    movingToTarget = false;
-                    return ActionResult.RUNNING;
-                }
-                else if (nextWaypointDir.x >= nextWaypointDir.z)
+                //if (Mathf.Approximately(nextWaypointDir.x, 0) && Mathf.Approximately(nextWaypointDir.z, 0))
+                //{
+                //    movingToTarget = false;
+                //    return ActionResult.RUNNING;
+                //}
+                if (Mathf.Abs(nextWaypointDir.x) >= Mathf.Abs(nextWaypointDir.z))
                 {
                     var x = Mathf.Ceil(Mathf.Abs(nextWaypointDir.x)) * Mathf.Sign(nextWaypointDir.x);
-                    targetTile = new Vector3(ai.Body.transform.position.x + x,
+                    targetTile = new Vector3(Mathf.Round(ai.Body.transform.position.x + x),
                                              0,
                                              Mathf.Round(ai.Body.transform.position.z));
                     moveDirection = new Vector3(Mathf.Sign(x), 0, 0);
@@ -52,7 +59,7 @@ public class TileMove : RAINAction
                     var z = Mathf.Ceil(Mathf.Abs(nextWaypointDir.z)) * Mathf.Sign(nextWaypointDir.z);
                     targetTile = new Vector3(Mathf.Round(ai.Body.transform.position.x),
                                              0,
-                                             ai.Body.transform.position.z + z);
+                                             Mathf.Round(ai.Body.transform.position.z + z));
                     moveDirection = new Vector3(0, 0, Mathf.Sign(z));
                     movingToTarget = true;
                 }
@@ -63,11 +70,22 @@ public class TileMove : RAINAction
         {
             ai.Motor.Move();
 
-            if (Vector3.Dot(targetTile - ai.Body.transform.position, moveDirection) > 0.9f)
+            if (Vector3.Dot((targetTile - ai.Body.transform.position).normalized, moveDirection) < -0.7f ||
+                ai.Body.transform.position == targetTile)
             {
                 ai.Body.transform.position = targetTile;
                 movingToTarget = false;
                 return ActionResult.SUCCESS;
+            }
+            else
+            {
+                //ai.Motor.Move();
+
+                //var target = ai.Navigator.CurrentPath.PathPoints[ai.Navigator.NextWaypoint - 1];
+                var targetDisplacement = targetTile - ai.Body.transform.position;
+                ai.Body.transform.position = ai.Body.transform.position + (targetDisplacement.normalized * ai.Motor.Speed * ai.DeltaTime);
+                ai.Body.transform.position = new Vector3(ai.Body.transform.position.x, 0, ai.Body.transform.position.z);
+                ai.Body.transform.rotation.SetLookRotation(targetDisplacement, Vector3.up);
             }
 
             /*if (Mathf.Approximately(ai.Body.transform.position.x, targetTile.x) &&
