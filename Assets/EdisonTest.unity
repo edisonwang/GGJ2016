@@ -6623,6 +6623,10 @@ Prefab:
       propertyPath: m_Name
       value: wall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 21270462, guid: ef4043efbc110402bb49292780c259f1, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 515321735
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef4043efbc110402bb49292780c259f1, type: 2}
   m_IsPrefabParent: 0
