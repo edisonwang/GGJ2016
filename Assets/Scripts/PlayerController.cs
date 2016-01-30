@@ -3,14 +3,13 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-
     Vector2 oldPosition;
     GameController gc;
     // Use this for initialization
     void Start()
     {
-        gc = GameController.getInstance();
-        // gc.setPlayer(this);
+        GameController.instance.setPlayer(this);
+
     }
 
     // Update is called once per frame
@@ -74,6 +73,6 @@ public class PlayerController : MonoBehaviour
 
     void turnDone()
     {
-        Debug.Log("Turn done!");
+        GameController.instance.playerTurnDone();
     }
 }

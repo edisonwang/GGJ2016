@@ -2,46 +2,55 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameController : MonoBehaviour {
-    private  static GameController _instance;
+public class GameController : MonoBehaviour
+{
+    public static GameController instance;
     private PlayerController mPlayer;
     private List<GuardController> mGuards;
 
-	// Use this for initialization
-	void Start () {
-        if (_instance == null){
-            initGameController();
-            _instance = this;
-            }
-	}
-    
-    private void initGameController(){
+    private int turnCounter;
+
+    // Use this for initialization
+    void Start()
+    {
+        turnCounter = 0;
         mPlayer = null;
-        if(mGuards == null)
+        if (mGuards == null)
             mGuards = new List<GuardController>();
         mGuards.Clear();
     }
-	
-    public static GameController getInstance(){
-        return _instance;
+
+    void Awake()
+    {
+        instance = this;
     }
-    
-	// Update is called once per frame
-	void Update () {
-	
-	}
-    
-    public void setPlayer(PlayerController player){
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void setPlayer(PlayerController player)
+    {
         mPlayer = player;
+        Debug.Log("Player set to " + mPlayer.transform.name);
     }
-    
-    public void setGuard(GuardController guard){
+
+    public void setGuard(GuardController guard)
+    {
         mGuards.Add(guard);
     }
-    
-    public void removeGuard(GuardController guard){
+
+    public void removeGuard(GuardController guard)
+    {
         mGuards.Remove(guard);
     }
-    
-    
+
+    public void playerTurnDone()
+    {
+        turnCounter++;
+        Debug.Log("Player turn "+turnCounter+" Done!");
+    }
+
 }
