@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - SceneTrigger
+  - WinPoint
   layers:
   - Default
   - TransparentFX

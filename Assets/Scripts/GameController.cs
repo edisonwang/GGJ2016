@@ -17,11 +17,13 @@ public GameObject DigScene;
     // Use this for initialization
     void Start()
     {
+
         turnCounter = 0;
         if (mGuards == null)
             mGuards = new List<GuardController>();
         mGuards.Clear();
         mIsRunning = false;
+       
     }
 
     void Awake()
@@ -31,7 +33,7 @@ public GameObject DigScene;
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         if(isRunning()){
         if(Input.GetKeyDown("escape")){
             mMenuController.gameObject.SetActive(true);
@@ -102,5 +104,9 @@ public GameObject DigScene;
     
     public bool isStarted(){
         return mIsStarted;
+    }
+    
+    public void Win(){
+        Debug.Log("Win!!!!!!!");
     }
 }
