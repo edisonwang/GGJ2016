@@ -1,22 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class PlayerDigController : MonoBehaviour
 {
-    bool isInDig = false;
-    GameController gc;
+    private bool isInCell = true;
     public GameObject startPoint;
     // Use this for initialization
     void Start()
     {
-        GameController.instance.setPlayer(this);
-
+        GameController.instance.setDigPlayer(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isInDig)
+        if (!isInCell)
         {
             if (Input.GetKeyDown("up"))
             {
@@ -54,20 +52,27 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown("space"))
             {
                 //iTween.MoveTo(Camera.main.gameObject, new Vector3(0, 0, 1.0f), 10.0f);
-                // iTween.MoveTo(Camera.main.gameObject,iTween.Hash("z",0.1f, "time", 2.0f,"oncomplete", "StartDigScene","oncompletetarget",GameController.instance.gameObject));
-                if (isGoToDig())
+                if (isBackToCell())
                 {
-                    GameController.instance.StartDigScene();
-                    isInDig = true;
+                    isInCell = true;
+                    GameController.instance.BackToCell();
                 }
-                else
-                {
-                    turnDone();
-                }
+
+
             }
         }
     }
+    void turnDone()
+    {
+        GameController.instance.playerTurnDone();
+    }
 
+    public void startDigging()
+    {
+        Debug.Log("Start Digging");
+        transform.position = startPoint.transform.position;
+        isInCell = false;
+    }
     bool isClear(Vector2 direction)
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 1.1f);
@@ -78,25 +83,7 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
-    void turnDone()
-    {
-        GameController.instance.playerTurnDone();
-    }
-
-    void StartDig()
-    {
-        Camera.main.transform.Translate(new Vector3(40.0f, 0, 0.1f));
-        iTween.MoveTo(Camera.main.gameObject, iTween.Hash("z", -10.0f, "time", 2.0f, "oncomplete", "turnDone", "oncompletetarget", this.gameObject));
-    }
-
-    public void BackToCell()
-    {
-        Debug.Log("Back to cell");
-        transform.position = startPoint.transform.position;
-        isInDig = false;
-    }
-
-    bool isGoToDig()
+    bool isBackToCell()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, 0.1f);
         if (hit.collider == null)

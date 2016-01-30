@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Building
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Backround
+  - Building
+  - Guards
+  - Underground
   - 
   - 
   - 
@@ -38,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Backround
+    uniqueID: 515321735
+    locked: 0
+  - name: Building
+    uniqueID: 655663835
+    locked: 0
+  - name: Player
+    uniqueID: 896492067
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
