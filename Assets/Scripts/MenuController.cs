@@ -7,6 +7,8 @@ public class MenuController : MonoBehaviour
     public GameObject[] selections;
     int pointer;
     public GameObject selectionMask;
+    public Sprite start;
+    public Sprite resume;
     private bool isShowing = true;
 
     // Use this for initialization
@@ -61,10 +63,10 @@ public class MenuController : MonoBehaviour
                 switch (pointer)
                 {
                     case 0:
-PlayGame();
+                        PlayGame();
                         break;
                     case 1:
-                    Application.Quit();
+                        Application.Quit();
                         break;
                     default:
                         return;
@@ -73,7 +75,8 @@ PlayGame();
             }
             if (Input.GetKeyDown("escape"))
             {
-                if(GameController.instance.isStarted()){
+                if (GameController.instance.isStarted())
+                {
                     PlayGame();
                 }
             }
@@ -84,5 +87,10 @@ PlayGame();
     {
         GameController.instance.setRunning(true);
         gameObject.SetActive(false);
+        changeToResume();
+    }
+    
+    public void changeToResume(){
+        selections[0].GetComponent<SpriteRenderer>().sprite = resume;
     }
 }
