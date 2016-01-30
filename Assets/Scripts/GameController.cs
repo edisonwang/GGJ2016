@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     bool mIsStarted = false;
 
 public GameObject DigScene;
+public GameObject MenuScreen;
     private int turnCounter;
 
     // Use this for initialization
@@ -23,6 +24,7 @@ public GameObject DigScene;
             mGuards = new List<GuardController>();
         mGuards.Clear();
         mIsRunning = false;
+        MenuScreen.SetActive(true);
        
     }
 

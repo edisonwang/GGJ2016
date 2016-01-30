@@ -47,6 +47,9 @@ TagManager:
   - name: Building
     uniqueID: 655663835
     locked: 0
+  - name: Furniture
+    uniqueID: 3673733809
+    locked: 0
   - name: Player
     uniqueID: 896492067
     locked: 0
