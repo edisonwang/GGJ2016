@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b22281bbe2cc74d0990a60e3fdae367c
-timeCreated: 1454189275
+timeCreated: 1454193524
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -69,6 +69,9 @@ TextureImporter:
     21300124: Prison cell_62
     21300126: Prison cell_63
     21300128: Prison cell_64
+    21300130: Prison cell_65
+    21300132: Prison cell_66
+    21300134: Prison cell_67
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -91,7 +94,7 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: 0
@@ -101,7 +104,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
-  compressionQuality: 50
+  compressionQuality: 82
   allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
@@ -1110,6 +1113,51 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: Prison cell_65
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: Prison cell_66
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: Prison cell_67
+      rect:
+        serializedVersion: 2
+        x: 96
         y: 0
         width: 32
         height: 32
