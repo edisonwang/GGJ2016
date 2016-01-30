@@ -4,6 +4,7 @@ using System.Collections;
 public class DigBlockController : MonoBehaviour
 {
     public Sprite[] sprites;
+    public Sprite bg;
     public float health = 4.0f;
     float initHealth;
     Color color;
@@ -17,10 +18,7 @@ public class DigBlockController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            GameObject.Destroy(this.gameObject);
-        }
+
     }
 
     public void Dig()
@@ -28,7 +26,12 @@ public class DigBlockController : MonoBehaviour
 
         health--;
         Debug.Log(transform.name + " Health: " + health);
-        if (health > 0)
+        if (health > 0){
             transform.GetComponent<SpriteRenderer>().sprite = sprites[(int)health - 1];
+        }else{
+            transform.GetComponent<SpriteRenderer>().sprite = bg;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        
     }
 }

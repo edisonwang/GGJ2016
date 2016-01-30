@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b22281bbe2cc74d0990a60e3fdae367c
-timeCreated: 1454145915
+timeCreated: 1454151248
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -49,6 +49,9 @@ TextureImporter:
     21300084: Prison cell_42
     21300086: Prison cell_43
     21300088: Prison cell_44
+    21300090: Prison cell_45
+    21300092: Prison cell_46
+    21300094: Prison cell_47
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -121,10 +124,11 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      - - {x: -16, y: -16}
+        - {x: -1, y: -16}
+        - {x: -1, y: -3}
+        - {x: -3, y: -1}
+        - {x: -16, y: -1}
     - name: Prison cell_2
       rect:
         serializedVersion: 2
@@ -271,12 +275,11 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -15, y: 16}
+      - - {x: -14, y: 16}
         - {x: -16, y: 14}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 15}
-        - {x: 3, y: 16}
+        - {x: 16, y: 16}
     - name: Prison cell_12
       rect:
         serializedVersion: 2
@@ -288,12 +291,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12, y: 16}
-        - {x: -16, y: 15}
+      - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 14}
-        - {x: 14, y: 16}
+        - {x: 16, y: 16}
     - name: Prison cell_13
       rect:
         serializedVersion: 2
@@ -384,11 +385,10 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: -16}
-        - {x: -1, y: -16}
-        - {x: -1, y: -3}
-        - {x: -3, y: -1}
-        - {x: -16, y: -1}
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
     - name: Prison cell_19
       rect:
         serializedVersion: 2
@@ -795,6 +795,51 @@ TextureImporter:
         - {x: 9, y: -14}
         - {x: 10, y: -12}
         - {x: 10, y: 11}
+    - name: Prison cell_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: Prison cell_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: Prison cell_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
     outline: []
   spritePackingTag: 
   userData: 

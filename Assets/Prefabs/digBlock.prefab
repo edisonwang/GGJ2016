@@ -78,6 +78,7 @@ MonoBehaviour:
   - {fileID: 21300068, guid: b22281bbe2cc74d0990a60e3fdae367c, type: 3}
   - {fileID: 21300066, guid: b22281bbe2cc74d0990a60e3fdae367c, type: 3}
   - {fileID: 21300050, guid: b22281bbe2cc74d0990a60e3fdae367c, type: 3}
+  bg: {fileID: 21300092, guid: b22281bbe2cc74d0990a60e3fdae367c, type: 3}
   health: 4
 --- !u!212 &21226286
 SpriteRenderer:
@@ -124,6 +125,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bg
+      value: 
+      objectReference: {fileID: 21300092, guid: b22281bbe2cc74d0990a60e3fdae367c,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 170796}
