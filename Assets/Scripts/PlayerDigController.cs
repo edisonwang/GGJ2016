@@ -14,6 +14,9 @@ public class PlayerDigController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!GameController.instance.isRunning()){
+            return;
+        }
         if (!isInCell)
         {
             if (Input.GetKeyDown("up"))
@@ -78,6 +81,9 @@ public class PlayerDigController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(direction.x,direction.y,0), direction, 0.1f);
         if (hit.collider == null)
             return true;
+        if(hit.collider.tag.StartsWith("Win")){
+            GameController.instance.Win();
+        }
         if (hit.collider.tag.StartsWith("Building")){
             if(hit.collider.name.StartsWith("dig")){
                 hit.collider.gameObject.GetComponent<DigBlockController>().Dig();

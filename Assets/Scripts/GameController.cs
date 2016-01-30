@@ -7,17 +7,25 @@ public class GameController : MonoBehaviour
     private PlayerController mPlayer;
     private PlayerDigController mDigPlayer;
     private List<GuardController> mGuards;
+    private MenuController mMenuController;
+    bool mIsRunning = false;
+    bool mIsStarted = false;
 
 public GameObject DigScene;
+public GameObject MenuScreen;
     private int turnCounter;
 
     // Use this for initialization
     void Start()
     {
+
         turnCounter = 0;
         if (mGuards == null)
             mGuards = new List<GuardController>();
         mGuards.Clear();
+        mIsRunning = false;
+        MenuScreen.SetActive(true);
+       
     }
 
     void Awake()
@@ -27,8 +35,13 @@ public GameObject DigScene;
 
     // Update is called once per frame
     void Update()
-    {
-
+    {   
+        if(isRunning()){
+        if(Input.GetKeyDown("escape")){
+            mMenuController.gameObject.SetActive(true);
+            mIsRunning = false;
+        }
+        }
     }
 
     public void setPlayer(PlayerController player)
@@ -47,6 +60,9 @@ public GameObject DigScene;
     {
         mGuards.Add(guard);
         Debug.Log("Guard: "+guard.transform.name+" Added.");
+    }
+    public void setMenuCOntroller(MenuController mc){
+        mMenuController = mc;
     }
 
     public void removeGuard(GuardController guard)
@@ -77,5 +93,22 @@ public GameObject DigScene;
 
     public void BackToCell(){
         StopDigScene();
+    }
+    
+    public void setRunning(bool flag){
+        mIsRunning = flag;
+        if (flag == true) mIsStarted = true;
+    }
+    
+    public bool isRunning(){
+        return mIsRunning;
+    }
+    
+    public bool isStarted(){
+        return mIsStarted;
+    }
+    
+    public void Win(){
+        Debug.Log("Win!!!!!!!");
     }
 }

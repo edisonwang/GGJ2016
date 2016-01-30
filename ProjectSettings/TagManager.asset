@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - SceneTrigger
+  - WinPoint
   layers:
   - Default
   - TransparentFX
@@ -45,6 +46,9 @@ TagManager:
     locked: 0
   - name: Building
     uniqueID: 655663835
+    locked: 0
+  - name: Furniture
+    uniqueID: 3673733809
     locked: 0
   - name: Player
     uniqueID: 896492067

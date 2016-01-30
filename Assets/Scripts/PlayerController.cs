@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!GameController.instance.isRunning()){
+            return;
+        }
         if (!isInDig)
         {
             if (Input.GetKeyDown("up"))
