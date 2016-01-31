@@ -129,6 +129,7 @@ public class GameController : MonoBehaviour
     
     public void Win(){
         Debug.Log("Win!!!!!!!");
+        DigScene.SetActive(false);
         Winning.SetActive(true);
         mIsRunning = false;
     }
