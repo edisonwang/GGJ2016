@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     private MenuController mMenuController;
     bool mIsRunning = false;
     bool mIsStarted = false;
+    bool isGuardTurn = false;
 
 public GameObject DigScene;
 public GameObject MenuScreen;
@@ -76,6 +77,7 @@ public GameObject MenuScreen;
     {
         turnCounter++;
         Debug.Log("Player turn "+turnCounter+" Done!");
+        
     }
 
     public void StartDigScene(){
@@ -111,5 +113,18 @@ public GameObject MenuScreen;
     
     public void Win(){
         Debug.Log("Win!!!!!!!");
+    }
+    
+    public void GuardTurnDone(){
+        isGuardTurn = false;
+    }
+    
+    public void GuardTurn(){
+        isGuardTurn = true;
+        GuardTurnDone();
+    }
+    
+    public bool isGuardTurnDone(){
+        return !isGuardTurn;
     }
 }

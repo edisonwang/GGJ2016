@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameController.instance.isRunning()){
+        if(!GameController.instance.isRunning() || !GameController.instance.isGuardTurnDone()){
             return;
         }
         if (!isInDig)
