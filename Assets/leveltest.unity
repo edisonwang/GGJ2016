@@ -41268,6 +41268,46 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 406766, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406766, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 406766, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10871266, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_SpotAngle
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 10871266, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_Range
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 10871266, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 10871266, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10871266, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_Intensity
+      value: 4.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 10871266, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_Color.b
+      value: 0.8666198
+      objectReference: {fileID: 0}
+    - target: {fileID: 107062, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
   m_IsPrefabParent: 0
