@@ -17,6 +17,34 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n0&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMCIp&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n1&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMSIp&quot;
       parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
@@ -43,7 +71,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
       = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 5&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n2&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMiIp&quot;
@@ -71,7 +99,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
       = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 5&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n3&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMyIp&quot;
@@ -99,7 +127,91 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
       = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 5&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n3a&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuM2EiKQ==&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n3b&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuM2IiKQ==&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n3c&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuM2MiKQ==&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n4&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNCIp&quot;
@@ -127,7 +239,231 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
       = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 5&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;animate
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 7&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n4a&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNGEiKQ==&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 7&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n4b&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNGIiKQ==&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 7&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n5&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNSIp&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 2&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n6&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNiIp&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n7&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNyIp&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n8&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuOCIp&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n9&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuOSIp&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;go to p1n10&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMTAiKQ==&quot;
+      parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
+      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;animate
       repeatuntil=&quot;&quot; name=&quot;animate walk&quot; debugbreak=&quot;False&quot;
       animationstate=&quot;Base Layer.guard_walk&quot; /&gt;&lt;animate repeatuntil=&quot;&quot;
       name=&quot;animate idle&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
