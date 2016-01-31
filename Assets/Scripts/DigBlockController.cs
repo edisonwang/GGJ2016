@@ -32,6 +32,7 @@ public class DigBlockController : MonoBehaviour
             transform.GetComponent<SpriteRenderer>().sprite = bg;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
+        GameController.instance.playerTurnDone();
         
     }
 }

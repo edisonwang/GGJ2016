@@ -15,6 +15,10 @@ public class GameController : MonoBehaviour
     public GameObject DigScene;
     public GameObject MenuScreen;
     private int turnCounter;
+    public bool isDigging = false;
+    
+    public GameObject Winning;
+    public GameObject Losing;
 
     // Use this for initialization
     void Start()
@@ -26,6 +30,9 @@ public class GameController : MonoBehaviour
         mIsRunning = false;
         MenuScreen.SetActive(true);
         DigScene.gameObject.SetActive(false);
+        isDigging = false;
+        Winning.SetActive(false);
+        Losing.SetActive(false);
        
     }
 
@@ -90,13 +97,17 @@ public class GameController : MonoBehaviour
         //iTween.MoveTo(Camera.main.gameObject,iTween.Hash("z",-10.0f, "time", 2.0f,"oncomplete", "startDigging","oncompletetarget",this.gameObject));
         DigScene.SetActive(true);
         mDigPlayer.startDigging();
+        isDigging = true;
         playerTurnDone();
     }
     void StopDigScene(){
         DigScene.SetActive(false);
         
         playerTurnDone();
+        mPlayer.gameObject.SetActive(true);
         mPlayer.BackToCell();
+        
+        isDigging = false;
     }
 
     public void BackToCell(){
@@ -118,8 +129,18 @@ public class GameController : MonoBehaviour
     
     public void Win(){
         Debug.Log("Win!!!!!!!");
+        Winning.SetActive(true);
+        mIsRunning = false;
     }
     
+    public void Lose(){
+        
+        Debug.Log("Lose!!!!!!!");
+        DigScene.SetActive(false);
+        Losing.SetActive(true);
+        mIsRunning = false;
+        
+    }
     public void GuardTurnDone(){
         isGuardTurn = false;
     }

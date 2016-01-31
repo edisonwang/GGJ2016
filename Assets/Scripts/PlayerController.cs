@@ -127,6 +127,7 @@ public class PlayerController : MonoBehaviour
     }
     
     void goDig(){
+        this.gameObject.SetActive(false);
         GameController.instance.StartDigScene();
         Bed.gameObject.transform.position = bedPosition;
     }

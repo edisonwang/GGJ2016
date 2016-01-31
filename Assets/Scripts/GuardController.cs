@@ -34,4 +34,14 @@ public class GuardController : MonoBehaviour
             }
         }
     }
+    void OnTriggerEnter(Collider hit)
+    {
+        if (hit.tag.StartsWith("Lose"))
+        {
+            if (GameController.instance.isDigging)
+            {
+                GameController.instance.Lose();
+            }
+        }
+    }
 }
