@@ -76,6 +76,7 @@ public GameObject MenuScreen;
     public void playerTurnDone()
     {
         turnCounter++;
+        GuardTurn();
         Debug.Log("Player turn "+turnCounter+" Done!");
         
     }
