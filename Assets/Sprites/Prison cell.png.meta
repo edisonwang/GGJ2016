@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b22281bbe2cc74d0990a60e3fdae367c
-timeCreated: 1454193524
+timeCreated: 1454197752
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -72,6 +72,8 @@ TextureImporter:
     21300130: Prison cell_65
     21300132: Prison cell_66
     21300134: Prison cell_67
+    21300136: Prison cell_68
+    21300138: Prison cell_69
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1158,6 +1160,36 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: Prison cell_68
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: Prison cell_69
+      rect:
+        serializedVersion: 2
+        x: 160
         y: 0
         width: 32
         height: 32
