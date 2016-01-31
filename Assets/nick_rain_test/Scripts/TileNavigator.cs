@@ -94,7 +94,18 @@ public class TileNavigator : BasicNavigator
                     sameZ = true;
                 }
             }
+            
         }
+        if (Mathf.Approximately(path.PathPoints[0].x, path.PathPoints[path.PathPoints.Count - 1].x) ||
+            Mathf.Approximately(path.PathPoints[0].z, path.PathPoints[path.PathPoints.Count - 1].z))
+        {
+            for (int i = 1; i < path.PathPoints.Count - 1; i++)
+            {
+                path.RemovePathNode(i);
+                --i;
+            }
+        }
+
 
         return result;
     }
