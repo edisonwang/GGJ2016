@@ -25,6 +25,7 @@ public GameObject MenuScreen;
         mGuards.Clear();
         mIsRunning = false;
         MenuScreen.SetActive(true);
+       DigScene.gameObject.SetActive(false);
        
     }
 
