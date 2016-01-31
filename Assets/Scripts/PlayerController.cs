@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     GameController gc;
     public GameObject startPoint;
     public GameObject arrow;
+    
+    Vector3 bedPosition;
+    public GameObject Bed;
     // Use this for initialization
     void Start()
     {
@@ -68,7 +71,8 @@ public class PlayerController : MonoBehaviour
                 // iTween.MoveTo(Camera.main.gameObject,iTween.Hash("z",0.1f, "time", 2.0f,"oncomplete", "StartDigScene","oncompletetarget",GameController.instance.gameObject));
                 if (isGoToDig())
                 {
-                    GameController.instance.StartDigScene();
+                    bedPosition = Bed.transform.position;
+                    iTween.MoveTo(Bed,iTween.Hash("z",2.0f, "time", 2.0f,"oncomplete", "goDig","oncompletetarget",this.gameObject));
                     isInDig = true;
                 }
                 else
@@ -108,6 +112,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Back to cell");
         transform.position = startPoint.transform.position;
         isInDig = false;
+        isOnTrgger = false;
     }
 
     bool isGoToDig()
@@ -120,4 +125,10 @@ public class PlayerController : MonoBehaviour
             return true;
         return false;
     }
+    
+    void goDig(){
+        GameController.instance.StartDigScene();
+        Bed.gameObject.transform.position = bedPosition;
+    }
+    
 }

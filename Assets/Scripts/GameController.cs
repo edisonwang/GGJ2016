@@ -80,6 +80,7 @@ public class GameController : MonoBehaviour
     public void playerTurnDone()
     {
         turnCounter++;
+        GuardTurn();
         Debug.Log("Player turn "+turnCounter+" Done!");
         GuardTurn();
     }
