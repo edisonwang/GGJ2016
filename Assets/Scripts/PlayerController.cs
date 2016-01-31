@@ -4,12 +4,15 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     bool isInDig = false;
+    bool isOnTrgger = false;
     GameController gc;
     public GameObject startPoint;
+    public GameObject arrow;
     // Use this for initialization
     void Start()
     {
         GameController.instance.setPlayer(this);
+        arrow.SetActive(false);
 
     }
 
@@ -27,6 +30,7 @@ public class PlayerController : MonoBehaviour
                 if (isClear(Vector3.forward))
                 {
                     this.transform.Translate(Vector3.forward);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
                 if (isClear(Vector3.back))
                 {
                     this.transform.Translate(Vector3.back);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
@@ -44,6 +49,7 @@ public class PlayerController : MonoBehaviour
                 if (isClear(Vector3.left))
                 {
                     this.transform.Translate(Vector3.left);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
@@ -52,6 +58,7 @@ public class PlayerController : MonoBehaviour
                 if (isClear(Vector3.right))
                 {
                     this.transform.Translate(Vector3.right);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
@@ -70,6 +77,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        arrow.SetActive(isOnTrgger);
     }
 
     bool isClear(Vector3 direction)
