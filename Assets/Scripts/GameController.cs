@@ -12,8 +12,8 @@ public class GameController : MonoBehaviour
     bool mIsStarted = false;
     bool isGuardTurn = false;
 
-public GameObject DigScene;
-public GameObject MenuScreen;
+    public GameObject DigScene;
+    public GameObject MenuScreen;
     private int turnCounter;
 
     // Use this for initialization
@@ -23,10 +23,9 @@ public GameObject MenuScreen;
         turnCounter = 0;
         if (mGuards == null)
             mGuards = new List<GuardController>();
-        mGuards.Clear();
         mIsRunning = false;
         MenuScreen.SetActive(true);
-       DigScene.gameObject.SetActive(false);
+        DigScene.gameObject.SetActive(false);
        
     }
 
@@ -39,10 +38,11 @@ public GameObject MenuScreen;
     void Update()
     {   
         if(isRunning()){
-        if(Input.GetKeyDown("escape")){
-            mMenuController.gameObject.SetActive(true);
-            mIsRunning = false;
-        }
+            if(Input.GetKeyDown("escape")){
+                mMenuController.gameObject.SetActive(true);
+                mIsRunning = false;
+            }
+            UpdateGuardStatus();
         }
     }
 
@@ -60,6 +60,10 @@ public GameObject MenuScreen;
 
     public void setGuard(GuardController guard)
     {
+        if (mGuards == null)
+        {
+            mGuards = new List<GuardController>();
+        }
         mGuards.Add(guard);
         Debug.Log("Guard: "+guard.transform.name+" Added.");
     }
@@ -77,7 +81,7 @@ public GameObject MenuScreen;
     {
         turnCounter++;
         Debug.Log("Player turn "+turnCounter+" Done!");
-        
+        GuardTurn();
     }
 
     public void StartDigScene(){
@@ -121,6 +125,21 @@ public GameObject MenuScreen;
     
     public void GuardTurn(){
         isGuardTurn = true;
+        for (int i = 0; i < mGuards.Count; i++)
+        {
+            mGuards[i].ActivateTurn();
+        }
+    }
+
+    public void UpdateGuardStatus()
+    {
+        for (int i = 0; i < mGuards.Count; i++)
+        {
+            if (!mGuards[i].Done)
+            {
+                return;
+            }
+        }
         GuardTurnDone();
     }
     

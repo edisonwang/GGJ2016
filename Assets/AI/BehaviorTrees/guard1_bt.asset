@@ -26,15 +26,12 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
-      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot;
-      name=&quot;animate walk&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
-      Layer.guard_walk&quot; /&gt;&lt;action repeatuntil=&quot;success&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;move one tile&quot;
-      debugbreak=&quot;False&quot; classname=&quot;TileMove&quot; /&gt;&lt;/parallel&gt;&lt;parallel
-      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
-      repeatuntil=&quot;&quot; name=&quot;animate idle&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;Base Layer.guard_idle&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
@@ -57,15 +54,12 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
-      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot;
-      name=&quot;animate walk&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
-      Layer.guard_walk&quot; /&gt;&lt;action repeatuntil=&quot;success&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;move one tile&quot;
-      debugbreak=&quot;False&quot; classname=&quot;TileMove&quot; /&gt;&lt;/parallel&gt;&lt;parallel
-      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
-      repeatuntil=&quot;&quot; name=&quot;animate idle&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;Base Layer.guard_idle&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
@@ -88,15 +82,12 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
-      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot;
-      name=&quot;animate walk&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
-      Layer.guard_walk&quot; /&gt;&lt;action repeatuntil=&quot;success&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;move one tile&quot;
-      debugbreak=&quot;False&quot; classname=&quot;TileMove&quot; /&gt;&lt;/parallel&gt;&lt;parallel
-      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
-      repeatuntil=&quot;&quot; name=&quot;animate idle&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;Base Layer.guard_idle&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
@@ -119,15 +110,12 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
-      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot;
-      name=&quot;animate walk&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
-      Layer.guard_walk&quot; /&gt;&lt;action repeatuntil=&quot;success&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;move one tile&quot;
-      debugbreak=&quot;False&quot; classname=&quot;TileMove&quot; /&gt;&lt;/parallel&gt;&lt;parallel
-      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
-      repeatuntil=&quot;&quot; name=&quot;animate idle&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;Base Layer.guard_idle&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
+      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
@@ -139,8 +127,22 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
       = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 5&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
-      type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
-      elementtype="System.String" /></fields><references /></scriptableobject>
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 5&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;animate
+      repeatuntil=&quot;&quot; name=&quot;animate walk&quot; debugbreak=&quot;False&quot;
+      animationstate=&quot;Base Layer.guard_walk&quot; /&gt;&lt;animate repeatuntil=&quot;&quot;
+      name=&quot;animate idle&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
+      Layer.guard_idle&quot; /&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate
+      walk&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base Layer.guard_walk&quot;
+      /&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate idle&quot; debugbreak=&quot;False&quot;
+      animationstate=&quot;Base Layer.guard_idle&quot; /&gt;&lt;animate repeatuntil=&quot;&quot;
+      name=&quot;animate walk&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
+      Layer.guard_walk&quot; /&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate
+      idle&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base Layer.guard_idle&quot;
+      /&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate walk&quot; debugbreak=&quot;False&quot;
+      animationstate=&quot;Base Layer.guard_walk&quot; /&gt;&lt;animate repeatuntil=&quot;&quot;
+      name=&quot;animate idle&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
+      Layer.guard_idle&quot; /&gt;&lt;/behaviortree&gt;" type="System.String" id="treeData"
+      /><field type="System.Array" id="treeBindings" elementtype="System.String" /></fields><references
+      /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []
