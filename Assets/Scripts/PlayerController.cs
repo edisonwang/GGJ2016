@@ -4,53 +4,64 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     bool isInDig = false;
+    bool isOnTrgger = false;
     GameController gc;
     public GameObject startPoint;
+    public GameObject arrow;
+    
+    Vector3 bedPosition;
+    public GameObject Bed;
     // Use this for initialization
     void Start()
     {
         GameController.instance.setPlayer(this);
+        arrow.SetActive(false);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!GameController.instance.isRunning()){
+        if(!GameController.instance.isRunning() || !GameController.instance.isGuardTurnDone()){
             return;
         }
         if (!isInDig)
         {
+            Debug.DrawRay(transform.position, Vector3.forward);
             if (Input.GetKeyDown("up"))
             {
-                if (isClear(Vector2.up))
+                if (isClear(Vector3.forward))
                 {
-                    this.transform.Translate(Vector2.up);
+                    this.transform.Translate(Vector3.forward);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
 
             if (Input.GetKeyDown("down"))
             {
-                if (isClear(Vector2.down))
+                if (isClear(Vector3.back))
                 {
-                    this.transform.Translate(Vector2.down);
+                    this.transform.Translate(Vector3.back);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
             if (Input.GetKeyDown("left"))
             {
-                if (isClear(Vector2.left))
+                if (isClear(Vector3.left))
                 {
-                    this.transform.Translate(Vector2.left);
+                    this.transform.Translate(Vector3.left);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
             if (Input.GetKeyDown("right"))
             {
-                if (isClear(Vector2.right))
+                if (isClear(Vector3.right))
                 {
-                    this.transform.Translate(Vector2.right);
+                    this.transform.Translate(Vector3.right);
+                    isOnTrgger = isGoToDig();
                     turnDone();
                 }
             }
@@ -60,7 +71,8 @@ public class PlayerController : MonoBehaviour
                 // iTween.MoveTo(Camera.main.gameObject,iTween.Hash("z",0.1f, "time", 2.0f,"oncomplete", "StartDigScene","oncompletetarget",GameController.instance.gameObject));
                 if (isGoToDig())
                 {
-                    GameController.instance.StartDigScene();
+                    bedPosition = Bed.transform.position;
+                    iTween.MoveTo(Bed,iTween.Hash("z",2.0f, "time", 2.0f,"oncomplete", "goDig","oncompletetarget",this.gameObject));
                     isInDig = true;
                 }
                 else
@@ -69,11 +81,14 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        arrow.SetActive(isOnTrgger);
     }
 
-    bool isClear(Vector2 direction)
+    bool isClear(Vector3 direction)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(direction.x,direction.y,0), direction, 0.1f);
+        RaycastHit hit;
+        Debug.DrawRay(transform.position, direction);
+        Physics.Raycast(transform.position, direction, out hit, 0.9f);
         if (hit.collider == null)
             return true;
         if (hit.collider.tag.StartsWith("Building"))
@@ -97,15 +112,24 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Back to cell");
         transform.position = startPoint.transform.position;
         isInDig = false;
+        isOnTrgger = false;
     }
 
     bool isGoToDig()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, 0.1f);
+        RaycastHit hit;
+        Physics.Raycast(transform.position, Vector3.forward, out hit, 0.5f);
         if (hit.collider == null)
             return false;
         if (hit.collider.tag.StartsWith("Scene"))
             return true;
         return false;
     }
+    
+    void goDig(){
+        this.gameObject.SetActive(false);
+        GameController.instance.StartDigScene();
+        Bed.gameObject.transform.position = bedPosition;
+    }
+    
 }
