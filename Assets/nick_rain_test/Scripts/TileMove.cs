@@ -80,7 +80,10 @@ public class TileMove : RAINAction
 
                 //var target = ai.Navigator.CurrentPath.PathPoints[ai.Navigator.NextWaypoint - 1];
                 var targetDisplacement = targetTile - ai.Body.transform.position;
-                ai.Body.transform.position = ai.Body.transform.position + (targetDisplacement.normalized * ai.Motor.Speed * ai.DeltaTime);
+                //Smooth move
+                //ai.Body.transform.position = ai.Body.transform.position + (targetDisplacement.normalized * ai.Motor.Speed * ai.DeltaTime);
+                //Snap move
+                ai.Body.transform.position = ai.Body.transform.position + (targetDisplacement.normalized);
                 ai.Body.transform.position = new Vector3(ai.Body.transform.position.x, 0, ai.Body.transform.position.z);
                 //ai.Body.transform.rotation.SetLookRotation(targetDisplacement, Vector3.up);
             }

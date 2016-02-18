@@ -1,29 +1,27 @@
 fileFormatVersion: 2
-guid: 9eb1d1881c68845a9b062efbbb0f108c
-timeCreated: 1455777883
+guid: e53a6339a7a2e49c689bafb22abb1ad5
+timeCreated: 1455778149
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: office_0
-    21300002: office_1
-    21300004: office_2
-    21300006: office_3
-    21300008: office_4
-    21300010: office_5
-    21300012: office_6
-    21300014: office_7
-    21300016: office_8
-    21300018: office_9
-    21300020: office_10
-    21300022: office_11
-    21300024: office_12
-    21300026: office_13
-    21300028: office_14
-    21300030: office_15
+    21300000: under_tiles_0
+    21300002: under_tiles_1
+    21300004: under_tiles_2
+    21300006: under_tiles_3
+    21300008: under_tiles_4
+    21300010: under_tiles_5
+    21300012: under_tiles_6
+    21300014: under_tiles_7
+    21300016: under_tiles_8
+    21300018: under_tiles_9
+    21300020: under_tiles_10
+    21300022: under_tiles_11
+    21300024: under_tiles_12
+    21300026: under_tiles_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -42,7 +40,7 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: 0
@@ -66,7 +64,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: office_0
+    - name: under_tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -74,15 +72,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12, y: -14}
-        - {x: 12, y: 12}
-        - {x: -7, y: 12}
-        - {x: -10, y: 10}
-        - {x: -10, y: -14}
-    - name: office_1
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: under_tiles_1
       rect:
         serializedVersion: 2
         x: 32
@@ -90,14 +87,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_2
+    - name: under_tiles_2
       rect:
         serializedVersion: 2
         x: 64
@@ -105,14 +102,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_3
+    - name: under_tiles_3
       rect:
         serializedVersion: 2
         x: 96
@@ -120,14 +117,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_4
+    - name: under_tiles_4
       rect:
         serializedVersion: 2
         x: 128
@@ -135,14 +132,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_5
+    - name: under_tiles_5
       rect:
         serializedVersion: 2
         x: 160
@@ -150,14 +147,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_6
+    - name: under_tiles_6
       rect:
         serializedVersion: 2
         x: 192
@@ -165,14 +162,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_7
+    - name: under_tiles_7
       rect:
         serializedVersion: 2
         x: 224
@@ -180,14 +177,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_8
+    - name: under_tiles_8
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +192,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_9
+    - name: under_tiles_9
       rect:
         serializedVersion: 2
         x: 32
@@ -210,14 +207,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_10
+    - name: under_tiles_10
       rect:
         serializedVersion: 2
         x: 64
@@ -225,14 +222,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_11
+    - name: under_tiles_11
       rect:
         serializedVersion: 2
         x: 96
@@ -240,14 +237,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_12
+    - name: under_tiles_12
       rect:
         serializedVersion: 2
         x: 128
@@ -255,14 +252,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_13
+    - name: under_tiles_13
       rect:
         serializedVersion: 2
         x: 160
@@ -270,53 +267,13 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: office_14
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
-    - name: office_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -98, y: 32}
-        - {x: -128, y: 2}
-        - {x: -128, y: -32}
-        - {x: 98, y: -32}
-        - {x: 128, y: -2}
-        - {x: 128, y: 32}
-      - - {x: -116, y: 28}
-        - {x: -122, y: 27}
-        - {x: -122, y: 7}
-        - {x: -120, y: 2}
-        - {x: -102, y: 2}
-        - {x: -100, y: 6}
-        - {x: -100, y: 26}
-        - {x: -102, y: 28}
     outline: []
   spritePackingTag: 
   userData: 
