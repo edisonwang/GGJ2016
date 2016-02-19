@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour
         isDigging = false;
         Winning.SetActive(false);
         Losing.SetActive(false);
+        //SceneManager.LoadScene(2,LoadSceneMode.Additive);
        
     }
 
@@ -168,5 +170,9 @@ public class GameController : MonoBehaviour
     
     public bool isGuardTurnDone(){
         return !isGuardTurn;
+    }
+    
+    public void restartGame(){
+        SceneManager.LoadScene(0);
     }
 }

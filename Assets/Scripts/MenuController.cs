@@ -77,7 +77,8 @@ public class MenuController : MonoBehaviour
             {
                 if (GameController.instance.isStarted())
                 {
-                    PlayGame();
+                    //PlayGame();
+                    GameController.instance.restartGame();
                 }
             }
         }
