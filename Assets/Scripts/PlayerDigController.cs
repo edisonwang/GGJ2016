@@ -26,6 +26,7 @@ public class PlayerDigController : MonoBehaviour
                     this.transform.Translate(Vector2.up);
                     turnDone();
                 }
+                return;
             }
 
             if (Input.GetKeyDown("down"))
@@ -35,6 +36,7 @@ public class PlayerDigController : MonoBehaviour
                     this.transform.Translate(Vector2.down);
                     turnDone();
                 }
+                return;
             }
             if (Input.GetKeyDown("left"))
             {
@@ -43,6 +45,7 @@ public class PlayerDigController : MonoBehaviour
                     this.transform.Translate(Vector2.left);
                     turnDone();
                 }
+                return;
             }
             if (Input.GetKeyDown("right"))
             {
@@ -51,6 +54,7 @@ public class PlayerDigController : MonoBehaviour
                     this.transform.Translate(Vector2.right);
                     turnDone();
                 }
+                return;
             }
             if (Input.GetKeyDown("space"))
             {
@@ -60,7 +64,7 @@ public class PlayerDigController : MonoBehaviour
                     isInCell = true;
                     GameController.instance.BackToCell();
                 }
-
+                return;
 
             }
         }

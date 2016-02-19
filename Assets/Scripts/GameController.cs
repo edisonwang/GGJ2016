@@ -87,7 +87,6 @@ public class GameController : MonoBehaviour
     public void playerTurnDone()
     {
         turnCounter++;
-        GuardTurn();
         Debug.Log("Player turn "+turnCounter+" Done!");
         GuardTurn();
     }
@@ -144,6 +143,7 @@ public class GameController : MonoBehaviour
     }
     public void GuardTurnDone(){
         isGuardTurn = false;
+        //Debug.Log("Guard Turn Done.");
     }
     
     public void GuardTurn(){

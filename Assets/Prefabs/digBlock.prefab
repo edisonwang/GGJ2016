@@ -79,7 +79,7 @@ MonoBehaviour:
   - {fileID: 21300066, guid: b22281bbe2cc74d0990a60e3fdae367c, type: 3}
   - {fileID: 21300050, guid: b22281bbe2cc74d0990a60e3fdae367c, type: 3}
   bg: {fileID: 21300092, guid: b22281bbe2cc74d0990a60e3fdae367c, type: 3}
-  health: 4
+  health: 2
 --- !u!212 &21226286
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -135,6 +135,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: e53a6339a7a2e49c689bafb22abb1ad5,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 170796}
