@@ -12,11 +12,6 @@ public class ContinueToTarget : RAINDecision
     public override void Start(AI ai)
     {
         ai.Motor.MoveTarget.NavigationTarget = target.Evaluate<NavigationTarget>(ai.DeltaTime, ai.WorkingMemory);
-        //var nt = ai.WorkingMemory.GetItem<NavigationTarget>("moveTarget");
-        //if (nt != null)
-        //{
-        //    ai.Motor.MoveTarget.NavigationTarget = nt;
-        //}
         base.Start(ai);
     }
 

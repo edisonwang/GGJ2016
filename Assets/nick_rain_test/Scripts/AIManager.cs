@@ -10,15 +10,11 @@ public class AIManager : MonoBehaviour {
 
     void Start()
     {
-        //guardEntity.EntityInit();
-        //aiRig.AIStart();
-        // guardEntity.
         aiRig.AI.WorkingMemory.GetItem<bool>("aiTurn");
     }
 
     void Update()
     {
-        //aiRig.AIUpdate();
         aiRig.AI.WorkingMemory.SetItem<bool>("aiTurn", aiTurn);
     }
 }

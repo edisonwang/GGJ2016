@@ -7,25 +7,8 @@ using RAIN.Representation;
 public class MultiTurnToTarget : RAINDecision
 {
 
-    //public Expression target;
-    //public Expression moveTarget;
-
     public override void Start(AI ai)
     {
-        /*if (ai.Motor.MoveTarget == null)
-        {
-            var navTarget = target.Evaluate<NavigationTarget>(ai.DeltaTime, ai.WorkingMemory);
-            ai.Motor.MoveTarget.NavigationTarget = navTarget;
-            ai.WorkingMemory.SetItem("moveTarget", navTarget);
-        }*/
-        //ai.WorkingMemory.SetItem(moveTarget.Evaluate<string>(ai.DeltaTime, ai.WorkingMemory), navTarget);
-        //ai.WorkingMemory.SetItem("moveTarget", navTarget);
-        
-        //var nt = ai.WorkingMemory.GetItem<NavigationTarget>("moveTarget");
-        //if (nt != null)
-        //{
-        //    ai.Motor.MoveTarget.NavigationTarget = nt;
-        //}
         base.Start(ai);
     }
 
