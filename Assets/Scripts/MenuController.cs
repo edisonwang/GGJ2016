@@ -10,6 +10,10 @@ public class MenuController : MonoBehaviour
     public Sprite start;
     public Sprite resume;
     public Sprite restart;
+    public Sprite Win;
+    public Sprite Lose;
+    
+    public SpriteRenderer Title;
     private bool isShowing = true;
     
     public GameObject scoretext;
@@ -27,7 +31,12 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(GameController.instance.isWin()){
+            Title.sprite = Win;
+        }
+               if(GameController.instance.isLose()){
+            Title.sprite = Lose;
+        }
         if (isShowing)
         {
 
