@@ -99,7 +99,10 @@ public class TileMoveW : RAINAction
                 ai.Body.transform.position = ai.Body.transform.position + (targetDisplacement.normalized);
                 ai.Body.transform.position = new Vector3(ai.Body.transform.position.x, 0, ai.Body.transform.position.z);
                 //ai.Body.transform.rotation.SetLookRotation(targetDisplacement, Vector3.up);
-                ai.WorkingMemory.SetItem("direction", new Vector2(targetDisplacement.x, targetDisplacement.z));
+                if (!ai.WorkingMemory.GetItem<bool>("directionOverride"))
+                {
+                    ai.WorkingMemory.SetItem("direction", new Vector2(targetDisplacement.x, targetDisplacement.z));
+                }
             }
 
             /*if (Mathf.Approximately(ai.Body.transform.position.x, targetTile.x) &&

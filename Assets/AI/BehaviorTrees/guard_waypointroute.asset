@@ -30,13 +30,19 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action
       repeatuntil=&quot;success&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
       namespace=&quot;&quot; name=&quot;tile move w&quot; debugbreak=&quot;False&quot;
-      classname=&quot;TileMoveW&quot; /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;any&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
-      fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;/waypointpath&gt;&lt;sequencer
+      classname=&quot;TileMoveW&quot; /&gt;&lt;mecparam valueexpression=&quot;direction.x&quot;
+      repeatuntil=&quot;&quot; parametertype=&quot;integer&quot; parametername=&quot;horizontal&quot;
+      name=&quot;mecparam&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
+      /&gt;&lt;mecparam valueexpression=&quot;direction.y&quot; repeatuntil=&quot;&quot;
+      parametertype=&quot;integer&quot; parametername=&quot;vertical&quot; name=&quot;mecparam&quot;
+      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;/waypointpath&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
       name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
@@ -53,7 +59,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;go to p1n0&quot; debugbreak=&quot;False&quot;&gt;&lt;decision
       repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMCIp&quot;
       parameters=&quot;dGFyZ2V0&quot; namespace=&quot;&quot; name=&quot;Continue To
-      Target&quot; debugbreak=&quot;False&quot; classname=&quot;ContinueToTarget&quot;&gt;&lt;sequencer
+      Target&quot; debugbreak=&quot;False&quot; classname=&quot;&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;

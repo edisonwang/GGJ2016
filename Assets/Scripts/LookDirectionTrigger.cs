@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using RAIN.Core;
 
 public class LookDirectionTrigger : MonoBehaviour
 {
@@ -12,15 +13,22 @@ public class LookDirectionTrigger : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        ForceLookDirection(other.gameObject);
+        //ForceLookDirection(other.gameObject);
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        other.GetComponentInChildren<AIRig>().AI.WorkingMemory.SetItem("directionOverride", false);
     }
 
     void ForceLookDirection(GameObject go)
     {
         if (go.tag == "Guard")
         {
-            go.GetComponent<Animator>().SetInteger("horizontal", (int)directionToLook.x);
-            go.GetComponent<Animator>().SetInteger("vertical", (int)directionToLook.y);
+            go.GetComponentInChildren<AIRig>().AI.WorkingMemory.SetItem("directionOverride", true);
+            go.GetComponentInChildren<AIRig>().AI.WorkingMemory.SetItem("direction", directionToLook);
+            go.GetComponentInChildren<Animator>().SetInteger("horizontal", (int)directionToLook.x);
+            go.GetComponentInChildren<Animator>().SetInteger("vertical", (int)directionToLook.y);
         }
     }
 }
