@@ -39,19 +39,17 @@ MonoBehaviour:
       name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
       /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
-      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;expression&quot; expression=&quot;&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;constraint repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;wait
-      for ai turn&quot; debugbreak=&quot;False&quot; constraint=&quot;aiTurn == true&quot;&gt;&lt;expression
-      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;increment
-      idle timer&quot; expression=&quot;idleTimer = idleTimer + 1&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
-      name=&quot;finish ai turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;check idle timer&quot; debugbreak=&quot;False&quot; constraint=&quot;idleTimer
-      == 1&quot; /&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
+      = idleTimer + 1&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
+      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n1&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMSIp&quot;
@@ -83,7 +81,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 2&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n2&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMiIp&quot;
@@ -115,7 +113,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 2&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n3&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuMyIp&quot;
@@ -179,7 +177,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 4&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n3b&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuM2IiKQ==&quot;
@@ -305,7 +303,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 7&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n4b&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNGIiKQ==&quot;
@@ -337,7 +335,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 5&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n5&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuNSIp&quot;
@@ -465,7 +463,7 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
       = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;check idle timer&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 1&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      debugbreak=&quot;False&quot; constraint=&quot;idleTimer == 3&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;go to p1n9&quot; debugbreak=&quot;False&quot;&gt;&lt;decision repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;bmF2aWdhdGlvbnRhcmdldCgicDFuOSIp&quot;
