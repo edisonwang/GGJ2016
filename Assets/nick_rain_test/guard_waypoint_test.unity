@@ -8367,11 +8367,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426388, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 401492, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 401492, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -12032,10 +12032,10 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
-        id="_mind" childrenvisible="False" /><field type="TileMotor" reference="3"
+        id="_mind" childrenvisible="True" /><field type="TileMotor" reference="3"
         id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
         reference="4" id="_animator" childrenvisible="False" /><field type="TileNavigator"
-        reference="5" id="_navigator" childrenvisible="True" /><field type="RAIN.Perception.BasicSenses"
+        reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
         reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
         /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
@@ -12096,7 +12096,7 @@ Prefab:
     - target: {fileID: 11436760, guid: a248407db255d77438718d34c0ea673a, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 8a1804ea1907b834b94c0d05d152eb79,
+      objectReference: {fileID: 11400000, guid: 08a4fd2c441d2c647a2c596ece893bd0,
         type: 2}
     - target: {fileID: 11436760, guid: a248407db255d77438718d34c0ea673a, type: 2}
       propertyPath: _dataSerializer._serializedCustomData.Array.size

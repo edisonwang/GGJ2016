@@ -79,10 +79,10 @@ public class TileMove : RAINAction
                 ai.Body.transform.position = targetTile;
                 pathFound = false;
 
-                if (ai.Body.transform.position == nextNavTarget.Position)
+                /*if (ai.Body.transform.position == nextNavTarget.Position)
                 {
                     ai.Body.transform.rotation = Quaternion.Euler(nextNavTarget.Orientation);
-                }
+                }*/
                 return ActionResult.SUCCESS;
             }
             else
