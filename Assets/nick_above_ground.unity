@@ -3689,6 +3689,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1d5233fa158440aa810b35ad363b22e, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &517400314 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2031784, guid: 1737d0949e6034b4e95c7a782310abab,
+    type: 2}
+  m_PrefabInternal: {fileID: 759377199}
 --- !u!4 &518664971 stripped
 Transform:
   m_PrefabParentObject: {fileID: 412952, guid: 75b31f952afef4f55b846c6121c972aa, type: 2}
@@ -5513,7 +5518,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11455860, guid: 1737d0949e6034b4e95c7a782310abab, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455860, guid: 1737d0949e6034b4e95c7a782310abab, type: 2}
+      propertyPath: lockToPixels
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455860, guid: 1737d0949e6034b4e95c7a782310abab, type: 2}
+      propertyPath: targetViewportSizeInPixels.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11455860, guid: 1737d0949e6034b4e95c7a782310abab, type: 2}
+      propertyPath: targetViewportSizeInPixels.y
+      value: 450
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1737d0949e6034b4e95c7a782310abab, type: 2}
@@ -7894,7 +7911,7 @@ Prefab:
         type: 3}
     - target: {fileID: 148314, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 485506, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11935,7 +11952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
@@ -11943,7 +11960,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 32
 --- !u!223 &1654601808
 Canvas:
   m_ObjectHideFlags: 0
@@ -11952,15 +11969,15 @@ Canvas:
   m_GameObject: {fileID: 1654601805}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 2
+  m_Camera: {fileID: 517400314}
+  m_PlaneDistance: 5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1309126143
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1654601809
 RectTransform:
@@ -11968,9 +11985,9 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1654601805}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9999994}
+  m_LocalScale: {x: 0.031111112, y: 0.031111112, z: 0.031111112}
   m_Children:
   - {fileID: 1545494325}
   - {fileID: 1768134835}
@@ -11978,9 +11995,9 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -4, y: 0.00000047683716}
+  m_SizeDelta: {x: 800, y: 450}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1657644261
 Prefab:
   m_ObjectHideFlags: 0
@@ -12878,14 +12895,14 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1768134834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1654601809}
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 123, y: 36.5}
+  m_AnchoredPosition: {x: 115.5, y: 39.3}
   m_SizeDelta: {x: 180, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768134836
@@ -12909,11 +12926,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 60
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
