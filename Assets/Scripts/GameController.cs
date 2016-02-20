@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -23,7 +24,9 @@ public class GameController : MonoBehaviour
     
     public GameObject Winning;
     public GameObject Losing;
-    
+
+    public AudioMixerSnapshot abovegroundSnapshot;
+    public AudioMixerSnapshot belowgroundSnapshot;
     private bool isWinning = false;
     private bool isLosing = false;
 
@@ -105,13 +108,14 @@ public class GameController : MonoBehaviour
        // Camera.main.transform.Translate(new Vector3(40.0f,0,0.1f));
         //iTween.MoveTo(Camera.main.gameObject,iTween.Hash("z",-10.0f, "time", 2.0f,"oncomplete", "startDigging","oncompletetarget",this.gameObject));
         DigScene.SetActive(true);
+        belowgroundSnapshot.TransitionTo(0.01f);
         mDigPlayer.startDigging();
         isDigging = true;
         playerTurnDone();
     }
     void StopDigScene(){
         DigScene.SetActive(false);
-        
+        abovegroundSnapshot.TransitionTo(0.01f);
         playerTurnDone();
         mPlayer.gameObject.SetActive(true);
         mPlayer.BackToCell();
