@@ -5,10 +5,12 @@ public class PlayerDigController : MonoBehaviour
 {
     private bool isInCell = true;
     public GameObject startPoint;
+    public GameObject PressSpace;
     // Use this for initialization
     void Start()
     {
         GameController.instance.setDigPlayer(this);
+        PressSpace.SetActive(false);
     }
 
     // Update is called once per frame
@@ -17,6 +19,9 @@ public class PlayerDigController : MonoBehaviour
         if(!GameController.instance.isRunning() || !GameController.instance.isGuardTurnDone()){
             return;
         }
+
+            PressSpace.SetActive(isBackToCell());
+
         if (!isInCell)
         {
             if (Input.GetKeyDown("up"))
@@ -63,6 +68,7 @@ public class PlayerDigController : MonoBehaviour
                 {
                     isInCell = true;
                     GameController.instance.BackToCell();
+                    PressSpace.SetActive(false);
                 }
                 return;
 

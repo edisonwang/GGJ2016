@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameController : MonoBehaviour
     private PlayerDigController mDigPlayer;
     private List<GuardController> mGuards;
     private MenuController mMenuController;
+    public Text StepCounter;
+    public Text WinningCounter;
     bool mIsRunning = false;
     bool mIsStarted = false;
     bool isGuardTurn = false;
@@ -20,6 +23,9 @@ public class GameController : MonoBehaviour
     
     public GameObject Winning;
     public GameObject Losing;
+    
+    private bool isWinning = false;
+    private bool isLosing = false;
 
     // Use this for initialization
     void Start()
@@ -53,6 +59,7 @@ public class GameController : MonoBehaviour
             }
             UpdateGuardStatus();
         }
+        StepCounter.gameObject.SetActive(mIsRunning);
     }
 
     public void setPlayer(PlayerController player)
@@ -89,6 +96,7 @@ public class GameController : MonoBehaviour
     public void playerTurnDone()
     {
         turnCounter++;
+        StepCounter.text = turnCounter.ToString();
         Debug.Log("Player turn "+turnCounter+" Done!");
         GuardTurn();
     }
@@ -117,7 +125,11 @@ public class GameController : MonoBehaviour
     
     public void setRunning(bool flag){
         mIsRunning = flag;
-        if (flag == true) mIsStarted = true;
+        if (flag == true){
+            mIsStarted = true;
+            
+        }
+        
     }
     
     public bool isRunning(){
@@ -131,16 +143,22 @@ public class GameController : MonoBehaviour
     public void Win(){
         Debug.Log("Win!!!!!!!");
         DigScene.SetActive(false);
-        Winning.SetActive(true);
+        //Winning.SetActive(true);
         mIsRunning = false;
+        isWinning = true;
+        mMenuController.gameObject.SetActive(true);
+        WinningCounter.text = turnCounter.ToString();
+        WinningCounter.gameObject.SetActive(true);
     }
     
     public void Lose(){
         
         Debug.Log("Lose!!!!!!!");
         DigScene.SetActive(false);
-        Losing.SetActive(true);
+        //Losing.SetActive(true);
         mIsRunning = false;
+        isLosing = true;
+        mMenuController.gameObject.SetActive(true);
         
     }
     public void GuardTurnDone(){
@@ -174,5 +192,12 @@ public class GameController : MonoBehaviour
     
     public void restartGame(){
         SceneManager.LoadScene(0);
+    }
+    
+    public bool isWin(){
+        return isWinning;
+    }
+    public bool isLose(){
+        return isLosing;
     }
 }
