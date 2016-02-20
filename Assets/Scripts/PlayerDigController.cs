@@ -6,11 +6,13 @@ public class PlayerDigController : MonoBehaviour
     private bool isInCell = true;
     public GameObject startPoint;
     public GameObject PressSpace;
+    public AudioSource audioSource;
     // Use this for initialization
     void Start()
     {
         GameController.instance.setDigPlayer(this);
         PressSpace.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -97,6 +99,7 @@ public class PlayerDigController : MonoBehaviour
         if (hit.collider.tag.StartsWith("Building")){
             if(hit.collider.name.StartsWith("dig")){
                 hit.collider.gameObject.GetComponent<DigBlockController>().Dig();
+                audioSource.Play();
             }
             return false;
         }
