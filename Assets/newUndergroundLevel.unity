@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0
   m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -6050,6 +6050,25 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 428520, guid: 78ce75821919c40389ada665debcb5bd, type: 2}
   m_PrefabInternal: {fileID: 852357140}
+--- !u!1 &1083867857 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 108444, guid: f6867aaf8bea64ad3becfea860c909ea, type: 2}
+  m_PrefabInternal: {fileID: 442214567}
+--- !u!114 &1083867863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083867857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2ce5fc8aab3413c8cd6d9ab9eaf00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetViewportSizeInPixels: {x: 150, y: 150}
+  lockToPixels: 1
+  pixelsPerUnit: 32
+  followTarget: {fileID: 0}
 --- !u!4 &1084218322 stripped
 Transform:
   m_PrefabParentObject: {fileID: 424036, guid: 89c0f4aba45c54b2b936cc85a2fb95b1, type: 2}

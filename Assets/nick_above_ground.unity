@@ -7820,7 +7820,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467962, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.34
       objectReference: {fileID: 0}
     - target: {fileID: 467962, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7911,7 +7911,7 @@ Prefab:
         type: 3}
     - target: {fileID: 148314, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 485506, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7930,6 +7930,10 @@ Prefab:
       propertyPath: WinningCounter
       value: 
       objectReference: {fileID: 1768134836}
+    - target: {fileID: 467962, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.58
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7e183cadf89f3400080ef75dfc0671bb, type: 2}
   m_IsPrefabParent: 0
