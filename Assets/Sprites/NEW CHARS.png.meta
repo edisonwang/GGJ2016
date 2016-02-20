@@ -1,13 +1,33 @@
 fileFormatVersion: 2
 guid: b2dce3813b88c4c6abdcb4056614a796
-timeCreated: 1455967685
+timeCreated: 1455970175
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: NEW CHARS_0
+    21300002: NEW CHARS_1
+    21300004: NEW CHARS_2
+    21300006: NEW CHARS_3
+    21300008: NEW CHARS_4
+    21300010: NEW CHARS_5
+    21300012: NEW CHARS_6
+    21300014: NEW CHARS_7
+    21300016: NEW CHARS_8
+    21300018: NEW CHARS_9
+    21300020: NEW CHARS_10
+    21300022: NEW CHARS_11
+    21300024: NEW CHARS_12
+    21300026: NEW CHARS_13
+    21300028: NEW CHARS_14
+    21300030: NEW CHARS_15
+    21300032: NEW CHARS_16
+    21300034: NEW CHARS_17
+    21300036: NEW CHARS_18
+    21300038: NEW CHARS_19
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -29,27 +49,398 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: NEW CHARS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 14}
+        - {x: -10, y: 8}
+        - {x: -10, y: -13}
+        - {x: -8, y: -14}
+        - {x: 8, y: -14}
+        - {x: 10, y: -9}
+        - {x: 10, y: 11}
+        - {x: 9, y: 14}
+    - name: NEW CHARS_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 14}
+        - {x: -10, y: 8}
+        - {x: -10, y: -14}
+        - {x: 8, y: -14}
+        - {x: 10, y: -12}
+        - {x: 10, y: 12}
+        - {x: 9, y: 14}
+    - name: NEW CHARS_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 14}
+        - {x: -10, y: 13}
+        - {x: -10, y: -14}
+        - {x: 10, y: -14}
+        - {x: 10, y: 12}
+        - {x: 9, y: 14}
+    - name: NEW CHARS_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 14}
+        - {x: -10, y: 9}
+        - {x: -10, y: -11}
+        - {x: -9, y: -14}
+        - {x: 6, y: -14}
+        - {x: 10, y: -12}
+        - {x: 10, y: 10}
+        - {x: 8, y: 14}
+    - name: NEW CHARS_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 14}
+        - {x: -10, y: -13}
+        - {x: -8, y: -15}
+        - {x: 5, y: -15}
+        - {x: 10, y: -12}
+        - {x: 10, y: 13}
+        - {x: 6, y: 14}
+    - name: NEW CHARS_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 14}
+        - {x: -10, y: 9}
+        - {x: -10, y: -10}
+        - {x: -3, y: -15}
+        - {x: 8, y: -15}
+        - {x: 10, y: -13}
+        - {x: 10, y: 10}
+        - {x: 9, y: 14}
+    - name: NEW CHARS_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 14}
+        - {x: -10, y: 10}
+        - {x: -10, y: -1}
+        - {x: -8, y: -12}
+        - {x: -7, y: -14}
+        - {x: 10, y: -14}
+        - {x: 10, y: 7}
+        - {x: 7, y: 14}
+    - name: NEW CHARS_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 14}
+        - {x: -5, y: 14}
+        - {x: -10, y: 12}
+        - {x: -10, y: -12}
+        - {x: -4, y: -14}
+        - {x: 8, y: -14}
+        - {x: 9, y: -12}
+        - {x: 10, y: -4}
+        - {x: 10, y: 13}
+    - name: NEW CHARS_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 14}
+        - {x: -10, y: -13}
+        - {x: -9, y: -14}
+        - {x: 10, y: -14}
+        - {x: 10, y: 11}
+        - {x: 6, y: 14}
+    - name: NEW CHARS_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 14}
+        - {x: -5, y: 14}
+        - {x: -10, y: 12}
+        - {x: -10, y: -12}
+        - {x: -4, y: -14}
+        - {x: 8, y: -14}
+        - {x: 9, y: -12}
+        - {x: 10, y: -4}
+        - {x: 10, y: 13}
+    - name: NEW CHARS_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 13}
+        - {x: -10, y: 12}
+        - {x: -10, y: -12}
+        - {x: -8, y: -14}
+        - {x: 9, y: -14}
+        - {x: 10, y: -11}
+        - {x: 10, y: 11}
+        - {x: 8, y: 13}
+    - name: NEW CHARS_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 13}
+        - {x: -10, y: 12}
+        - {x: -10, y: -12}
+        - {x: -8, y: -14}
+        - {x: 9, y: -14}
+        - {x: 10, y: -11}
+        - {x: 10, y: 11}
+        - {x: 8, y: 13}
+    - name: NEW CHARS_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 13}
+        - {x: -10, y: -14}
+        - {x: 6, y: -14}
+        - {x: 10, y: -9}
+        - {x: 10, y: 12}
+        - {x: 5, y: 13}
+    - name: NEW CHARS_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 13}
+        - {x: -5, y: 13}
+        - {x: -10, y: 12}
+        - {x: -10, y: -13}
+        - {x: -7, y: -14}
+        - {x: 9, y: -14}
+        - {x: 10, y: -12}
+        - {x: 10, y: 10}
+    - name: NEW CHARS_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 13}
+        - {x: -10, y: 12}
+        - {x: -10, y: -12}
+        - {x: -7, y: -15}
+        - {x: 5, y: -15}
+        - {x: 10, y: -10}
+        - {x: 10, y: 9}
+        - {x: 8, y: 13}
+    - name: NEW CHARS_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 13}
+        - {x: -10, y: 4}
+        - {x: -10, y: -11}
+        - {x: -3, y: -15}
+        - {x: 7, y: -15}
+        - {x: 10, y: -9}
+        - {x: 10, y: 12}
+        - {x: 7, y: 13}
+    - name: NEW CHARS_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 13}
+        - {x: -10, y: 10}
+        - {x: -10, y: 1}
+        - {x: -8, y: -9}
+        - {x: -6, y: -14}
+        - {x: 7, y: -14}
+        - {x: 10, y: -13}
+        - {x: 10, y: 11}
+        - {x: 5, y: 13}
+    - name: NEW CHARS_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 13}
+        - {x: -10, y: -6}
+        - {x: -7, y: -14}
+        - {x: 7, y: -14}
+        - {x: 10, y: -4}
+        - {x: 10, y: 11}
+        - {x: 5, y: 13}
+    - name: NEW CHARS_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 13}
+        - {x: -10, y: -13}
+        - {x: -8, y: -14}
+        - {x: 10, y: -14}
+        - {x: 10, y: 12}
+        - {x: 7, y: 13}
+    - name: NEW CHARS_19
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 13}
+        - {x: -10, y: -6}
+        - {x: -7, y: -14}
+        - {x: 7, y: -14}
+        - {x: 10, y: -4}
+        - {x: 10, y: 11}
+        - {x: 5, y: 13}
     outline: []
   spritePackingTag: 
   userData: 
