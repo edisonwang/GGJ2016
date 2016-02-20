@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
                     this.transform.Translate(Vector3.forward);
                     isOnTrgger = isGoToDig();
                     turnDone();
+                    return;
                 }
             }
 
@@ -48,6 +49,7 @@ public class PlayerController : MonoBehaviour
                     this.transform.Translate(Vector3.back);
                     isOnTrgger = isGoToDig();
                     turnDone();
+                    return;
                 }
             }
             if (Input.GetKeyDown("left"))
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
                     isOnTrgger = isGoToDig();
                     turnDone();
                 }
+                return;
             }
             if (Input.GetKeyDown("right"))
             {
@@ -67,6 +70,7 @@ public class PlayerController : MonoBehaviour
                     isOnTrgger = isGoToDig();
                     turnDone();
                 }
+                return;
             }
             if (Input.GetKeyDown("space"))
             {
@@ -75,13 +79,14 @@ public class PlayerController : MonoBehaviour
                 if (isGoToDig())
                 {
                     bedPosition = Bed.transform.position;
-                    iTween.MoveTo(Bed,iTween.Hash("z",2.0f, "time", 2.0f,"oncomplete", "goDig","oncompletetarget",this.gameObject));
+                    iTween.MoveTo(Bed,iTween.Hash("z",bedPosition.z + 1.0f, "time", 1.0f,"oncomplete", "goDig","oncompletetarget",this.gameObject));
                     isInDig = true;
                 }
                 else
                 {
                     turnDone();
                 }
+                return;
             }
         }
         arrow.SetActive(isOnTrgger);
@@ -107,15 +112,17 @@ public class PlayerController : MonoBehaviour
     void StartDig()
     {
         Camera.main.transform.Translate(new Vector3(40.0f, 0, 0.1f));
-        iTween.MoveTo(Camera.main.gameObject, iTween.Hash("z", -10.0f, "time", 2.0f, "oncomplete", "turnDone", "oncompletetarget", this.gameObject));
+        //iTween.MoveTo(Camera.main.gameObject, iTween.Hash("z", -10.0f, "time", 1.0f, "oncomplete", "turnDone", "oncompletetarget", this.gameObject));
     }
 
     public void BackToCell()
     {
-        Debug.Log("Back to cell");
+      
         transform.position = startPoint.transform.position;
-        isInDig = false;
-        isOnTrgger = false;
+        iTween.MoveTo(Bed,iTween.Hash("z",bedPosition.z, "time", 1.0f,"oncomplete", "comeback","oncompletetarget",this.gameObject));
+           Debug.Log("Back to cell");
+        
+
     }
 
     bool isGoToDig()
@@ -132,7 +139,14 @@ public class PlayerController : MonoBehaviour
     void goDig(){
         this.gameObject.SetActive(false);
         GameController.instance.StartDigScene();
-        Bed.gameObject.transform.position = bedPosition;
+        //Bed.gameObject.transform.position = bedPosition;
+    }
+    
+    void comeback(){
+        isInDig = false;
+        isOnTrgger = false;
+        
+        Debug.Log("Back!!!!!");
     }
     
 }

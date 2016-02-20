@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class GameController : MonoBehaviour
         isDigging = false;
         Winning.SetActive(false);
         Losing.SetActive(false);
+        //SceneManager.LoadScene(2,LoadSceneMode.Additive);
        
     }
 
@@ -87,7 +89,6 @@ public class GameController : MonoBehaviour
     public void playerTurnDone()
     {
         turnCounter++;
-        GuardTurn();
         Debug.Log("Player turn "+turnCounter+" Done!");
         GuardTurn();
     }
@@ -144,6 +145,7 @@ public class GameController : MonoBehaviour
     }
     public void GuardTurnDone(){
         isGuardTurn = false;
+        //Debug.Log("Guard Turn Done.");
     }
     
     public void GuardTurn(){
@@ -168,5 +170,9 @@ public class GameController : MonoBehaviour
     
     public bool isGuardTurnDone(){
         return !isGuardTurn;
+    }
+    
+    public void restartGame(){
+        SceneManager.LoadScene(0);
     }
 }
