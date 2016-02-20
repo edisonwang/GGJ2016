@@ -27,10 +27,10 @@ public class PlayerController : MonoBehaviour
         if (!isInDig)
         {
             Debug.DrawRay(transform.position, Vector3.forward);
-            if (Input.mouseScrollDelta.magnitude > 0)
+            /*if (Input.mouseScrollDelta.magnitude > 0)
             {
                 turnDone();
-            }
+            }*/
             if (Input.GetKeyDown("up"))
             {
                 if (isClear(Vector3.forward))
@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour
                     bedPosition = Bed.transform.position;
                     iTween.MoveTo(Bed,iTween.Hash("z",bedPosition.z + 1.0f, "time", 1.0f,"oncomplete", "goDig","oncompletetarget",this.gameObject));
                     isInDig = true;
+                    GetComponent<AudioSource>().Play();
                 }
                 else
                 {
@@ -121,7 +122,7 @@ public class PlayerController : MonoBehaviour
         transform.position = startPoint.transform.position;
         iTween.MoveTo(Bed,iTween.Hash("z",bedPosition.z, "time", 1.0f,"oncomplete", "comeback","oncompletetarget",this.gameObject));
            Debug.Log("Back to cell");
-        
+        GetComponent<AudioSource>().Play();
 
     }
 

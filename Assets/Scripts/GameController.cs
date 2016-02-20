@@ -33,7 +33,6 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         turnCounter = 0;
         if (mGuards == null)
             mGuards = new List<GuardController>();
@@ -163,7 +162,7 @@ public class GameController : MonoBehaviour
         mIsRunning = false;
         isLosing = true;
         mMenuController.gameObject.SetActive(true);
-        
+
     }
     public void GuardTurnDone(){
         isGuardTurn = false;

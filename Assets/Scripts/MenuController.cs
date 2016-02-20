@@ -20,6 +20,9 @@ public class MenuController : MonoBehaviour
     
     public GameObject scoretext;
     public GameObject score;
+    private bool gameOverAudioPlayed = false;
+    public AudioClip winAudio;
+    public AudioClip loseAudio;
 
     // Use this for initialization
     void Start()
@@ -36,9 +39,19 @@ public class MenuController : MonoBehaviour
         if(GameController.instance.isWin()){
             Title.sprite = Win;
             HowToPlay.sprite = WinningTurn;
+            if (!gameOverAudioPlayed)
+            {
+                gameOverAudioPlayed = true;
+                GetComponent<AudioSource>().PlayOneShot(winAudio);
+            }
         }
-               if(GameController.instance.isLose()){
+        if(GameController.instance.isLose()){
             Title.sprite = Lose;
+            if (!gameOverAudioPlayed)
+            {
+                gameOverAudioPlayed = true;
+                GetComponent<AudioSource>().PlayOneShot(loseAudio);
+            }
         }
         if (isShowing)
         {
