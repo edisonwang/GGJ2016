@@ -9,6 +9,7 @@ TagManager:
   - WinPoint
   - Wall
   - LoseTrigger
+  - Guard
   layers:
   - Default
   - TransparentFX
