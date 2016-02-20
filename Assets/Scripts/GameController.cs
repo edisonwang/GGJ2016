@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour
     
     public GameObject Winning;
     public GameObject Losing;
+    
+    private bool isWinning = false;
+    private bool isLosing = false;
 
     // Use this for initialization
     void Start()
@@ -139,16 +142,20 @@ public class GameController : MonoBehaviour
     public void Win(){
         Debug.Log("Win!!!!!!!");
         DigScene.SetActive(false);
-        Winning.SetActive(true);
+        //Winning.SetActive(true);
         mIsRunning = false;
+        isWinning = true;
+        mMenuController.gameObject.SetActive(true);
     }
     
     public void Lose(){
         
         Debug.Log("Lose!!!!!!!");
         DigScene.SetActive(false);
-        Losing.SetActive(true);
+        //Losing.SetActive(true);
         mIsRunning = false;
+        isLosing = true;
+        mMenuController.gameObject.SetActive(true);
         
     }
     public void GuardTurnDone(){
@@ -182,5 +189,12 @@ public class GameController : MonoBehaviour
     
     public void restartGame(){
         SceneManager.LoadScene(0);
+    }
+    
+    public bool isWin(){
+        return isWinning;
+    }
+    public bool isLose(){
+        return isLosing;
     }
 }

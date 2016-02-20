@@ -27,6 +27,7 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (isShowing)
         {
 
@@ -109,4 +110,5 @@ public class MenuController : MonoBehaviour
     void Restart(){
         GameController.instance.restartGame();
     }
+    
 }
