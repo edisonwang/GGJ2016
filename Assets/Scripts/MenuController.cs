@@ -12,8 +12,10 @@ public class MenuController : MonoBehaviour
     public Sprite restart;
     public Sprite Win;
     public Sprite Lose;
+    public Sprite WinningTurn;
     
     public SpriteRenderer Title;
+    public SpriteRenderer HowToPlay;
     private bool isShowing = true;
     
     public GameObject scoretext;
@@ -33,6 +35,7 @@ public class MenuController : MonoBehaviour
     {
         if(GameController.instance.isWin()){
             Title.sprite = Win;
+            HowToPlay.sprite = WinningTurn;
         }
                if(GameController.instance.isLose()){
             Title.sprite = Lose;

@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     private List<GuardController> mGuards;
     private MenuController mMenuController;
     public Text StepCounter;
+    public Text WinningCounter;
     bool mIsRunning = false;
     bool mIsStarted = false;
     bool isGuardTurn = false;
@@ -146,6 +147,8 @@ public class GameController : MonoBehaviour
         mIsRunning = false;
         isWinning = true;
         mMenuController.gameObject.SetActive(true);
+        WinningCounter.text = turnCounter.ToString();
+        WinningCounter.gameObject.SetActive(true);
     }
     
     public void Lose(){
