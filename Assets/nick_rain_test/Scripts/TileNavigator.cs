@@ -20,6 +20,20 @@ public class TileNavigator : BasicNavigator
     {
         mlt = base.GetNextPathWaypoint(aPathTarget, aAllow3DMovement, aAllowOffGraphMovement, aCachedMoveLookTarget);
         //Debug.Log("Called GetNextPathWaypoint");
+        if (CurrentPath == null || CurrentPath.PathPoints == null)
+        {
+            Debug.Log("Path points null");
+            return mlt;
+        }
+        //if (NextWaypoint == CurrentPath.PathPoints.Count)
+        //{
+        //    NextWaypoint = CurrentPath.PathPoints.Count - 1;
+        //}
+        if (NextWaypoint < CurrentPath.PathPoints.Count - 1 &&
+            AI.Body.transform.position == CurrentPath.PathPoints[NextWaypoint])
+        {
+            NextWaypoint += 1;
+        }
         
         return mlt;
     }
@@ -27,19 +41,26 @@ public class TileNavigator : BasicNavigator
     public override bool GetPathToMoveTarget(MoveLookTarget aPathTarget, bool allowOffGraphMovement, out RAINPath path)
     {
         //Debug.Log("Called GetPathToMoveTarget");
+        
+        // Find path within Nav Mesh
         var result = base.GetPathToMoveTarget(aPathTarget, allowOffGraphMovement, out path);
 
+        // Round points to nearest unit on grid
         for (int i = 0; i < path.PathPoints.Count; i++)
         {
             var p = path.PathPoints[i];
-            path.PathPoints[i] = new Vector3(Mathf.Round(p.x), 0, Mathf.Round(p.z));
+            path.PathPoints[i] = new Vector3(Mathf.Round((Mathf.Abs(p.x) - 0.03f) * Mathf.Sign(p.x)),
+                                             0,
+                                             Mathf.Round((Mathf.Abs(p.z) - 0.03f) * Mathf.Sign(p.z)));
         }
 
+        // Return if the path is too small to cull nodes
         if (path.PathNodes.Count == 2)
         {
             return result;
         }
 
+        // Remove duplicate nodes
         for (int i = 0; i < path.PathNodes.Count - 1; i++)
         {
             if (path.PathPoints[i] == path.PathPoints[i + 1])
@@ -49,6 +70,7 @@ public class TileNavigator : BasicNavigator
             }
         }
 
+        // Remove points that are on the same line except the first and last
         bool sameX = false;
         bool sameZ = false;
         for (int i = 0; i < path.PathNodes.Count - 1; i++)
@@ -96,6 +118,8 @@ public class TileNavigator : BasicNavigator
             }
             
         }
+
+        // If the start and end points are on the same line, remove all inbetween points
         if (Mathf.Approximately(path.PathPoints[0].x, path.PathPoints[path.PathPoints.Count - 1].x) ||
             Mathf.Approximately(path.PathPoints[0].z, path.PathPoints[path.PathPoints.Count - 1].z))
         {
@@ -105,7 +129,6 @@ public class TileNavigator : BasicNavigator
                 --i;
             }
         }
-
 
         return result;
     }

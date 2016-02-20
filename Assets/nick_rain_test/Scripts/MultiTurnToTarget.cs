@@ -4,14 +4,23 @@ using RAIN.Navigation.Targets;
 using RAIN.Representation;
 
 [RAINDecision]
-public class ContinueToTarget : RAINDecision
+public class MultiTurnToTarget : RAINDecision
 {
 
-    public Expression target;
+    //public Expression target;
+    //public Expression moveTarget;
 
     public override void Start(AI ai)
     {
-        ai.Motor.MoveTarget.NavigationTarget = target.Evaluate<NavigationTarget>(ai.DeltaTime, ai.WorkingMemory);
+        /*if (ai.Motor.MoveTarget == null)
+        {
+            var navTarget = target.Evaluate<NavigationTarget>(ai.DeltaTime, ai.WorkingMemory);
+            ai.Motor.MoveTarget.NavigationTarget = navTarget;
+            ai.WorkingMemory.SetItem("moveTarget", navTarget);
+        }*/
+        //ai.WorkingMemory.SetItem(moveTarget.Evaluate<string>(ai.DeltaTime, ai.WorkingMemory), navTarget);
+        //ai.WorkingMemory.SetItem("moveTarget", navTarget);
+        
         //var nt = ai.WorkingMemory.GetItem<NavigationTarget>("moveTarget");
         //if (nt != null)
         //{
