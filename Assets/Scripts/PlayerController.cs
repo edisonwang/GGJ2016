@@ -16,9 +16,8 @@ public class PlayerController : MonoBehaviour
     {
         GameController.instance.setPlayer(this);
         arrow.SetActive(false);
-
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +27,10 @@ public class PlayerController : MonoBehaviour
         if (!isInDig)
         {
             Debug.DrawRay(transform.position, Vector3.forward);
+            if (Input.mouseScrollDelta.magnitude > 0)
+            {
+                turnDone();
+            }
             if (Input.GetKeyDown("up"))
             {
                 if (isClear(Vector3.forward))

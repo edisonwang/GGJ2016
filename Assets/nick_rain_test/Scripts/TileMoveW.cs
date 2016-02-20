@@ -2,12 +2,14 @@
 using RAIN.Action;
 using RAIN.Core;
 using RAIN.Navigation.Targets;
+using RAIN.Navigation.Waypoints;
+using RAIN.Motion;
 
 [RAINAction]
-public class TileMove : RAINAction
+public class TileMoveW : RAINAction
 {
     //public Expression target;
-    private NavigationTarget nextNavTarget;
+    private MoveLookTarget nextNavTarget;
     private Vector3 targetTile;
     private Vector3 moveDirection;
     private bool pathFound;
@@ -20,10 +22,10 @@ public class TileMove : RAINAction
         //ai.Motor.MoveTarget.NavigationTarget = target.Evaluate<RAIN.Navigation.Targets.NavigationTarget>(ai.DeltaTime, ai.WorkingMemory);
         //targetTile = ai.Motor.MoveTarget.Position;
         //base.Start(ai);
-        var nt = ai.WorkingMemory.GetItem<NavigationTarget>("moveTarget");
+        var nt = ai.WorkingMemory.GetItem<MoveLookTarget>("moveTarget");
         if (nt != null)
         {
-            ai.Motor.MoveTarget.NavigationTarget = nt;
+            ai.Motor.MoveTarget = nt;
             nextNavTarget = nt;
         }
         ai.Motor.Move();
@@ -31,7 +33,7 @@ public class TileMove : RAINAction
 
     public override ActionResult Execute(AI ai)
     {
-        
+
         if (!pathFound)
         {
             if (ai.Navigator.CurrentPath != null)
@@ -42,7 +44,7 @@ public class TileMove : RAINAction
                 }
                 var nextWaypointPos = ai.Navigator.CurrentPath.PathPoints[ai.Navigator.NextWaypoint];
                 var nextWaypointDir = (nextWaypointPos - ai.Body.transform.position).normalized;
-                
+
                 if (Mathf.Approximately(nextWaypointDir.x, 0) && Mathf.Approximately(nextWaypointDir.z, 0))
                 {
                     pathFound = true;
@@ -68,7 +70,7 @@ public class TileMove : RAINAction
                 }
             }
         }
-        
+
         if (pathFound)
         {
             ai.Motor.Move();
@@ -79,10 +81,10 @@ public class TileMove : RAINAction
                 ai.Body.transform.position = targetTile;
                 pathFound = false;
 
-                if (ai.Body.transform.position == nextNavTarget.Position)
+                /*if (ai.Body.transform.position == nextNavTarget.Position)
                 {
                     ai.Body.transform.rotation = Quaternion.Euler(nextNavTarget.Orientation);
-                }
+                }*/
                 return ActionResult.SUCCESS;
             }
             else
@@ -107,7 +109,7 @@ public class TileMove : RAINAction
                 movingToTarget = false;
                 return ActionResult.SUCCESS;
             }*/
-            
+
         }
         return ActionResult.RUNNING;
         //return base.Execute(ai);
