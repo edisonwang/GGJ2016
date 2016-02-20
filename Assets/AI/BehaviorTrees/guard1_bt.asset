@@ -29,15 +29,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
       returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;expression&quot; expression=&quot;&quot; debugbreak=&quot;False&quot;
@@ -63,15 +65,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -93,15 +97,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -123,15 +129,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -153,15 +161,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -183,15 +193,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -213,15 +225,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -243,15 +257,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -271,15 +287,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -301,15 +319,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -331,15 +351,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -361,15 +383,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -391,15 +415,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -421,15 +447,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -451,15 +479,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -481,15 +511,17 @@ MonoBehaviour:
       fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;move one tile&quot; debugbreak=&quot;False&quot; classname=&quot;TileMove&quot;
-      /&gt;&lt;/parallel&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;finish ai turn&quot; expression=&quot;aiTurn
-      = false&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; name=&quot;reset idle timer&quot; expression=&quot;idleTimer
-      = 0&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
+      /&gt;&lt;treebinding repeatuntil=&quot;&quot; name=&quot;footstep and direction&quot;
+      debugbreak=&quot;False&quot; binding=&quot;footstep and direction&quot; /&gt;&lt;/parallel&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;finish ai
+      turn&quot; expression=&quot;aiTurn = false&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;reset idle timer&quot; expression=&quot;idleTimer = 0&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/decision&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;success&quot;
       priority=&quot;&quot; name=&quot;wait for ai turn&quot; debugbreak=&quot;False&quot;
       constraint=&quot;aiTurn == true&quot;&gt;&lt;expression returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;increment idle timer&quot; expression=&quot;idleTimer
@@ -512,7 +544,8 @@ MonoBehaviour:
       animationstate=&quot;Base Layer.guard_walk&quot; /&gt;&lt;animate repeatuntil=&quot;&quot;
       name=&quot;animate idle&quot; debugbreak=&quot;False&quot; animationstate=&quot;Base
       Layer.guard_idle&quot; /&gt;&lt;/behaviortree&gt;" type="System.String" id="treeData"
-      /><field type="System.Array" id="treeBindings" elementtype="System.String" /></fields><references
+      /><field type="System.Array" id="treeBindings" elementtype="System.String"><field
+      value="footstep and direction" type="System.String" id="element0" /></field></fields><references
       /></scriptableobject>
     _serializedGameObjects: []
     _serializedCustomData: []

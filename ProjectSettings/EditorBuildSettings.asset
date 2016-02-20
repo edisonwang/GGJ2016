@@ -15,3 +15,7 @@ EditorBuildSettings:
     path: Assets/nick_above_ground.unity
   - enabled: 1
     path: Assets/newUndergroundLevel.unity
+  - enabled: 0
+    path: Assets/nick_rain_test/guard_waypoint_test.unity
+  - enabled: 0
+    path: Assets/nick_under_ground.unity

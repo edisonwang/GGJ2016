@@ -12,23 +12,19 @@ public class TileNavigator : BasicNavigator
     // Seems to not get used
     public override bool GetPathTo(Vector3 aTargetPosition, int aMaxPathfindSteps, float aMaxPathLength, bool aAllowOffGraphMovement, out RAINPath aPath)
     {
-        //Debug.Log("Called GetPathTo");
         return base.GetPathTo(aTargetPosition, aMaxPathfindSteps, aMaxPathLength, aAllowOffGraphMovement, out aPath);
     }
 
     public override MoveLookTarget GetNextPathWaypoint(MoveLookTarget aPathTarget, bool aAllow3DMovement, bool aAllowOffGraphMovement, MoveLookTarget aCachedMoveLookTarget = null)
     {
         mlt = base.GetNextPathWaypoint(aPathTarget, aAllow3DMovement, aAllowOffGraphMovement, aCachedMoveLookTarget);
-        //Debug.Log("Called GetNextPathWaypoint");
+
         if (CurrentPath == null || CurrentPath.PathPoints == null)
         {
             Debug.Log("Path points null");
             return mlt;
         }
-        //if (NextWaypoint == CurrentPath.PathPoints.Count)
-        //{
-        //    NextWaypoint = CurrentPath.PathPoints.Count - 1;
-        //}
+
         if (NextWaypoint < CurrentPath.PathPoints.Count - 1 &&
             AI.Body.transform.position == CurrentPath.PathPoints[NextWaypoint])
         {
@@ -40,8 +36,6 @@ public class TileNavigator : BasicNavigator
 
     public override bool GetPathToMoveTarget(MoveLookTarget aPathTarget, bool allowOffGraphMovement, out RAINPath path)
     {
-        //Debug.Log("Called GetPathToMoveTarget");
-        
         // Find path within Nav Mesh
         var result = base.GetPathToMoveTarget(aPathTarget, allowOffGraphMovement, out path);
 
@@ -75,12 +69,6 @@ public class TileNavigator : BasicNavigator
         bool sameZ = false;
         for (int i = 0; i < path.PathNodes.Count - 1; i++)
         {
-            //if (Mathf.Approximately(path.PathPoints[i].x, AI.Body.transform.position.x) &&
-            //    Mathf.Approximately(path.PathPoints[i].z, AI.Body.transform.position.z))
-            //{
-                //path.RemovePathNode(i);
-                //i--;
-            //}
             if (sameX)
             {
                 if (path.PathPoints[i].x == path.PathPoints[i + 1].x)
@@ -135,7 +123,6 @@ public class TileNavigator : BasicNavigator
 
     public override bool IsAt(MoveLookTarget aTarget)
     {
-        //Debug.Log("Called IsAt");
         return base.IsAt(aTarget);
     }
 
