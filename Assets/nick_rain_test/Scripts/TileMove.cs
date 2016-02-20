@@ -6,7 +6,6 @@ using RAIN.Navigation.Targets;
 [RAINAction]
 public class TileMove : RAINAction
 {
-    //public Expression target;
     private NavigationTarget nextNavTarget;
     private Vector3 targetTile;
     private Vector3 moveDirection;
@@ -15,11 +14,6 @@ public class TileMove : RAINAction
     public override void Start(AI ai)
     {
         pathFound = false;
-        //targetTile = target.Evaluate<Vector3>(ai.DeltaTime, ai.WorkingMemory);
-        //ai.Motor.MoveTarget = new MoveLookTarget();
-        //ai.Motor.MoveTarget.NavigationTarget = target.Evaluate<RAIN.Navigation.Targets.NavigationTarget>(ai.DeltaTime, ai.WorkingMemory);
-        //targetTile = ai.Motor.MoveTarget.Position;
-        //base.Start(ai);
         var nt = ai.WorkingMemory.GetItem<NavigationTarget>("moveTarget");
         if (nt != null)
         {
@@ -46,7 +40,6 @@ public class TileMove : RAINAction
                 if (Mathf.Approximately(nextWaypointDir.x, 0) && Mathf.Approximately(nextWaypointDir.z, 0))
                 {
                     pathFound = true;
-                    //return ActionResult.RUNNING;
                 }
                 else if (Mathf.Abs(nextWaypointDir.x) >= Mathf.Abs(nextWaypointDir.z))
                 {
@@ -79,40 +72,24 @@ public class TileMove : RAINAction
                 ai.Body.transform.position = targetTile;
                 pathFound = false;
 
-                /*if (ai.Body.transform.position == nextNavTarget.Position)
-                {
-                    ai.Body.transform.rotation = Quaternion.Euler(nextNavTarget.Orientation);
-                }*/
                 return ActionResult.SUCCESS;
             }
             else
             {
-                //ai.Motor.Move();
-
-                //var target = ai.Navigator.CurrentPath.PathPoints[ai.Navigator.NextWaypoint - 1];
                 var targetDisplacement = targetTile - ai.Body.transform.position;
                 //Smooth move
                 //ai.Body.transform.position = ai.Body.transform.position + (targetDisplacement.normalized * ai.Motor.Speed * ai.DeltaTime);
                 //Snap move
                 ai.Body.transform.position = ai.Body.transform.position + (targetDisplacement.normalized);
                 ai.Body.transform.position = new Vector3(ai.Body.transform.position.x, 0, ai.Body.transform.position.z);
-                //ai.Body.transform.rotation.SetLookRotation(targetDisplacement, Vector3.up);
 
-
-                //ai.WorkingMemory.SetItem("direction", new Vector2(targetDisplacement.x, targetDisplacement.z));
-            }
-
-            /*if (Mathf.Approximately(ai.Body.transform.position.x, targetTile.x) &&
-                Mathf.Approximately(ai.Body.transform.position.z, targetTile.z))
-            {
-                ai.Body.transform.position = targetTile;
-                movingToTarget = false;
-                return ActionResult.SUCCESS;
-            }*/
-            
+                if (!ai.WorkingMemory.GetItem<bool>("directionOverride"))
+                {
+                    ai.WorkingMemory.SetItem("direction", new Vector2(targetDisplacement.x, targetDisplacement.z));
+                }
+            }        
         }
         return ActionResult.RUNNING;
-        //return base.Execute(ai);
     }
 
     public override void Stop(AI ai)

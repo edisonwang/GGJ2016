@@ -20,7 +20,6 @@ public class GuardController : MonoBehaviour
     public void ActivateTurn()
     {
         done = false;
-        //Debug.Log(ai.AI.WorkingMemory.ItemExists("aiTurn"));
         ai.AI.WorkingMemory.SetItem("aiTurn", true);
     }
 
