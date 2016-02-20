@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameController : MonoBehaviour
     private PlayerDigController mDigPlayer;
     private List<GuardController> mGuards;
     private MenuController mMenuController;
+    public Text StepCounter;
     bool mIsRunning = false;
     bool mIsStarted = false;
     bool isGuardTurn = false;
@@ -53,6 +55,7 @@ public class GameController : MonoBehaviour
             }
             UpdateGuardStatus();
         }
+        StepCounter.gameObject.SetActive(mIsRunning);
     }
 
     public void setPlayer(PlayerController player)
@@ -89,6 +92,7 @@ public class GameController : MonoBehaviour
     public void playerTurnDone()
     {
         turnCounter++;
+        StepCounter.text = turnCounter.ToString();
         Debug.Log("Player turn "+turnCounter+" Done!");
         GuardTurn();
     }
@@ -117,7 +121,11 @@ public class GameController : MonoBehaviour
     
     public void setRunning(bool flag){
         mIsRunning = flag;
-        if (flag == true) mIsStarted = true;
+        if (flag == true){
+            mIsStarted = true;
+            
+        }
+        
     }
     
     public bool isRunning(){

@@ -9,7 +9,11 @@ public class MenuController : MonoBehaviour
     public GameObject selectionMask;
     public Sprite start;
     public Sprite resume;
+    public Sprite restart;
     private bool isShowing = true;
+    
+    public GameObject scoretext;
+    public GameObject score;
 
     // Use this for initialization
     void Start()
@@ -63,6 +67,10 @@ public class MenuController : MonoBehaviour
                 switch (pointer)
                 {
                     case 0:
+                        if(GameController.instance.isStarted()){
+                            Restart();
+                            return;
+                        }
                         PlayGame();
                         break;
                     case 1:
@@ -88,10 +96,17 @@ public class MenuController : MonoBehaviour
     {
         GameController.instance.setRunning(true);
         gameObject.SetActive(false);
-        changeToResume();
+        //changeToResume();
+        changeToRestart();
     }
     
     public void changeToResume(){
         selections[0].GetComponent<SpriteRenderer>().sprite = resume;
+    }
+    public void changeToRestart(){
+        selections[0].GetComponent<SpriteRenderer>().sprite = restart;
+    }
+    void Restart(){
+        GameController.instance.restartGame();
     }
 }
